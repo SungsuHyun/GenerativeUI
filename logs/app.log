@@ -1716,3 +1716,259 @@
 2025-12-03 16:22:27.991 | INFO     | __main__:client_disconnected:984 - [DISCONNECT] {'clientId': 'tNnwKZQuQTaMhCHkAAAB', 'reason': 'server namespace disconnect', 'durationMs': 24334}
 2025-12-03 16:22:27.991 | INFO     | __main__:cancel_session_by_client_id:213 - [DISCONNECT] No active sid found for clientId=tNnwKZQuQTaMhCHkAAAB
 2025-12-03 16:22:27.992 | INFO     | __main__:disconnect:997 - Client disconnected: T9xjF5BmkMru9AXeAAAB
+2025-12-11 14:41:08.308 | INFO     | __main__:<module>:1092 - Starting Socket.IO MCP Host server...
+2025-12-11 14:41:08.316 | INFO     | __main__:lifespan:89 - Starting up Socket.IO MCP Host application...
+2025-12-11 14:41:08.316 | INFO     | __main__:preload_agent_expressions:53 - Preloaded agent expression: p1 = 21 lines
+2025-12-11 14:41:08.316 | WARNING  | __main__:_read_file_lines:33 - Failed to read file ./core/agent_expression/p2_sequential_thinking.txt: [Errno 2] No such file or directory: './core/agent_expression/p2_sequential_thinking.txt'
+2025-12-11 14:41:08.316 | INFO     | __main__:preload_agent_expressions:53 - Preloaded agent expression: p2 = 0 lines
+2025-12-11 14:41:08.316 | INFO     | __main__:preload_agent_expressions:53 - Preloaded agent expression: p3 = 107 lines
+2025-12-11 14:41:08.316 | INFO     | __main__:preload_agent_expressions:53 - Preloaded agent expression: p4 = 34 lines
+2025-12-11 14:41:08.316 | INFO     | __main__:preload_agent_expressions:53 - Preloaded agent expression: p5 = 34 lines
+2025-12-11 14:41:08.316 | INFO     | __main__:preload_agent_expressions:56 - Preloaded agent expressions: p1=21 lines, p2=0 lines, p3=107 lines, p4=34 lines, p5=34 lines
+2025-12-11 14:41:08.316 | INFO     | __main__:lifespan:97 - Layout preload completed: middle=33, fixed_types=['button', 'bottom', 'top']
+2025-12-11 14:41:08.316 | INFO     | __main__:lifespan:101 -   - fixed[button]: 1
+2025-12-11 14:41:08.316 | INFO     | __main__:lifespan:101 -   - fixed[bottom]: 1
+2025-12-11 14:41:08.316 | INFO     | __main__:lifespan:101 -   - fixed[top]: 1
+2025-12-11 14:41:08.316 | INFO     | __main__:lifespan:104 -   - sample middle ids: ['action_10_btn_icon', 'action_11_btn_cta', 'action_12_btn_profile', 'action_13_device_power', 'action_14_a_device_slider']
+2025-12-11 14:41:08.316 | INFO     | mcp_clients.manager:init_mcp_client:129 - Found 24 custom MCP servers
+2025-12-11 14:41:08.316 | INFO     | mcp_clients.manager:init_mcp_client:133 - Found 2 external MCP servers
+2025-12-11 14:41:08.371 | INFO     | mcp_clients.client:__init__:294 - BaseMCPClient initialized (model=claude-sonnet-4-20250514)
+2025-12-11 14:41:08.371 | INFO     | mcp_clients.manager:connect_to_servers:76 - Connecting to custom MCP servers...
+2025-12-11 14:41:08.371 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_memory: memory
+2025-12-11 14:41:08.371 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_memory: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/memory/memory.py
+2025-12-11 14:41:08.606 | INFO     | mcp_clients.client:connect:209 - Connected to custom_memory: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/memory/memory.py with 6 tools: ['memory_get_recent_items', 'memory_search_documents', 'memory_find_contact_by_name', 'memory_get_favorite_images', 'memory_list_upcoming_events', 'memory_get_recent_messages']
+2025-12-11 14:41:08.607 | INFO     | mcp_clients.client:add_server:338 - Server custom_memory provides 6 tools
+2025-12-11 14:41:08.607 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_memory
+2025-12-11 14:41:08.607 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: memory
+2025-12-11 14:41:08.607 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_calendar: samsung_calendar
+2025-12-11 14:41:08.607 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_calendar: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_calendar.py
+2025-12-11 14:41:08.837 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_calendar: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_calendar.py with 3 tools: ['samsung_calendar_get_upcoming_events', 'samsung_calendar_get_event_details', 'samsung_calendar_list_all_events']
+2025-12-11 14:41:08.839 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_calendar provides 3 tools
+2025-12-11 14:41:08.839 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_calendar
+2025-12-11 14:41:08.839 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_calendar
+2025-12-11 14:41:08.839 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_contacts: samsung_contacts
+2025-12-11 14:41:08.839 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_contacts: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_contacts.py
+2025-12-11 14:41:09.065 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_contacts: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_contacts.py with 3 tools: ['samsung_contacts_get_recent_contacts', 'samsung_contacts_search_contacts_by_name', 'samsung_contacts_get_contact_details']
+2025-12-11 14:41:09.067 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_contacts provides 3 tools
+2025-12-11 14:41:09.067 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_contacts
+2025-12-11 14:41:09.067 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_contacts
+2025-12-11 14:41:09.067 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_gallery: samsung_gallery
+2025-12-11 14:41:09.067 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_gallery: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_gallery.py
+2025-12-11 14:41:09.295 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_gallery: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_gallery.py with 5 tools: ['samsung_gallery_get_recent_photos', 'samsung_gallery_search_photos_by_location', 'samsung_gallery_get_photo_details', 'samsung_gallery_get_photos_by_date_range', 'samsung_gallery_get_photos_by_event']
+2025-12-11 14:41:09.297 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_gallery provides 5 tools
+2025-12-11 14:41:09.297 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_gallery
+2025-12-11 14:41:09.297 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_gallery
+2025-12-11 14:41:09.298 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_health: samsung_health
+2025-12-11 14:41:09.298 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_health: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_health.py
+2025-12-11 14:41:09.524 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_health: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_health.py with 6 tools: ['samsung_health_get_recent_steps', 'samsung_health_get_sleep_data', 'samsung_health_get_heart_rate', 'samsung_health_get_calories_burned', 'samsung_health_get_water_intake', 'samsung_health_get_weight']
+2025-12-11 14:41:09.526 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_health provides 6 tools
+2025-12-11 14:41:09.526 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_health
+2025-12-11 14:41:09.526 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_health
+2025-12-11 14:41:09.526 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_internet: samsung_internet
+2025-12-11 14:41:09.526 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_internet: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_internet.py
+2025-12-11 14:41:09.759 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_internet: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_internet.py with 3 tools: ['samsung_internet_get_recent_bookmarks', 'samsung_internet_search_browsing_history', 'samsung_internet_get_open_tabs']
+2025-12-11 14:41:09.761 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_internet provides 3 tools
+2025-12-11 14:41:09.761 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_internet
+2025-12-11 14:41:09.761 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_internet
+2025-12-11 14:41:09.761 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_messages: samsung_messages
+2025-12-11 14:41:09.761 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_messages: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_messages.py
+2025-12-11 14:41:09.987 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_messages: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_messages.py with 5 tools: ['samsung_messages_get_recent_messages', 'samsung_messages_search_messages_by_keyword', 'samsung_messages_find_contact_by_name', 'samsung_messages_get_message_attachments', 'samsung_messages_get_conversation_history']
+2025-12-11 14:41:09.989 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_messages provides 5 tools
+2025-12-11 14:41:09.989 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_messages
+2025-12-11 14:41:09.989 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_messages
+2025-12-11 14:41:09.989 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_music: samsung_music
+2025-12-11 14:41:09.989 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_music: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_music.py
+2025-12-11 14:41:10.214 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_music: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_music.py with 6 tools: ['samsung_music_get_recent_played_tracks', 'samsung_music_search_music_by_keyword', 'samsung_music_get_playlist_details', 'samsung_music_get_top_artists', 'samsung_music_get_album_info', 'samsung_music_get_favorite_tracks']
+2025-12-11 14:41:10.216 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_music provides 6 tools
+2025-12-11 14:41:10.216 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_music
+2025-12-11 14:41:10.216 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_music
+2025-12-11 14:41:10.216 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_my_files: samsung_my_files
+2025-12-11 14:41:10.216 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_my_files: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_my_files.py
+2025-12-11 14:41:10.451 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_my_files: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_my_files.py with 6 tools: ['samsung_my_files_get_recent_items', 'samsung_my_files_search_documents', 'samsung_my_files_find_contact_by_name', 'samsung_my_files_get_images_by_date', 'samsung_my_files_list_files_in_directory', 'samsung_my_files_get_file_details']
+2025-12-11 14:41:10.454 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_my_files provides 6 tools
+2025-12-11 14:41:10.454 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_my_files
+2025-12-11 14:41:10.454 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_my_files
+2025-12-11 14:41:10.454 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_notes: samsung_notes
+2025-12-11 14:41:10.454 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_notes: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_notes.py
+2025-12-11 14:41:10.689 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_notes: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_notes.py with 6 tools: ['samsung_notes_get_recent_notes', 'samsung_notes_search_notes_by_keyword', 'samsung_notes_get_note_by_id', 'samsung_notes_get_notes_by_date_range', 'samsung_notes_get_shared_notes', 'samsung_notes_get_notes_with_attachments']
+2025-12-11 14:41:10.691 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_notes provides 6 tools
+2025-12-11 14:41:10.691 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_notes
+2025-12-11 14:41:10.691 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_notes
+2025-12-11 14:41:10.691 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_pay: samsung_pay
+2025-12-11 14:41:10.691 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_pay: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_pay.py
+2025-12-11 14:41:10.928 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_pay: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_pay.py with 6 tools: ['samsung_pay_get_recent_transactions', 'samsung_pay_search_transactions_by_merchant', 'samsung_pay_get_monthly_spending_summary', 'samsung_pay_find_contact_by_transaction', 'samsung_pay_get_favorite_merchants', 'samsung_pay_get_transaction_details']
+2025-12-11 14:41:10.930 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_pay provides 6 tools
+2025-12-11 14:41:10.930 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_pay
+2025-12-11 14:41:10.930 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_pay
+2025-12-11 14:41:10.930 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_reminders: samsung_reminders
+2025-12-11 14:41:10.930 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_reminders: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_reminders.py
+2025-12-11 14:41:11.154 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_reminders: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_reminders.py with 3 tools: ['samsung_reminders_get_recent_reminders', 'samsung_reminders_search_reminders_by_keyword', 'samsung_reminders_get_reminders_by_date']
+2025-12-11 14:41:11.156 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_reminders provides 3 tools
+2025-12-11 14:41:11.156 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_reminders
+2025-12-11 14:41:11.156 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_reminders
+2025-12-11 14:41:11.156 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_settings: samsung_settings
+2025-12-11 14:41:11.156 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_settings: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_settings.py
+2025-12-11 14:41:11.387 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_settings: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_settings.py with 6 tools: ['samsung_settings_get_recent_wifi_networks', 'samsung_settings_get_bluetooth_devices', 'samsung_settings_get_recent_notifications', 'samsung_settings_get_recent_calls', 'samsung_settings_get_recent_messages', 'samsung_settings_get_recent_app_usage']
+2025-12-11 14:41:11.389 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_settings provides 6 tools
+2025-12-11 14:41:11.389 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_settings
+2025-12-11 14:41:11.389 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_settings
+2025-12-11 14:41:11.389 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_samsung_smartthings: samsung_smartthings
+2025-12-11 14:41:11.389 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_samsung_smartthings: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_smartthings.py
+2025-12-11 14:41:11.616 | INFO     | mcp_clients.client:connect:209 - Connected to custom_samsung_smartthings: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/samsung/samsung_smartthings.py with 6 tools: ['samsung_smartthings_get_recent_devices', 'samsung_smartthings_search_scenes', 'samsung_smartthings_get_device_status', 'samsung_smartthings_list_automations', 'samsung_smartthings_get_energy_usage', 'samsung_smartthings_get_device_location']
+2025-12-11 14:41:11.618 | INFO     | mcp_clients.client:add_server:338 - Server custom_samsung_smartthings provides 6 tools
+2025-12-11 14:41:11.619 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_samsung_smartthings
+2025-12-11 14:41:11.619 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: samsung_smartthings
+2025-12-11 14:41:11.619 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_amazon: amazon
+2025-12-11 14:41:11.619 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_amazon: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/amazon.py
+2025-12-11 14:41:11.851 | INFO     | mcp_clients.client:connect:209 - Connected to custom_amazon: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/amazon.py with 6 tools: ['amazon_get_recent_orders', 'amazon_search_products', 'amazon_get_order_details', 'amazon_get_recommended_products', 'amazon_get_user_reviews', 'amazon_get_user_wishlist']
+2025-12-11 14:41:11.853 | INFO     | mcp_clients.client:add_server:338 - Server custom_amazon provides 6 tools
+2025-12-11 14:41:11.853 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_amazon
+2025-12-11 14:41:11.853 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: amazon
+2025-12-11 14:41:11.853 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_gmail: gmail
+2025-12-11 14:41:11.853 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_gmail: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/gmail.py
+2025-12-11 14:41:12.085 | INFO     | mcp_clients.client:connect:209 - Connected to custom_gmail: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/gmail.py with 6 tools: ['gmail_get_recent_emails', 'gmail_search_emails_by_keyword', 'gmail_find_contact_by_name', 'gmail_get_unread_emails', 'gmail_get_email_attachments', 'gmail_send_email']
+2025-12-11 14:41:12.087 | INFO     | mcp_clients.client:add_server:338 - Server custom_gmail provides 6 tools
+2025-12-11 14:41:12.087 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_gmail
+2025-12-11 14:41:12.088 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: gmail
+2025-12-11 14:41:12.088 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_instagram: instagram
+2025-12-11 14:41:12.088 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_instagram: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/instagram.py
+2025-12-11 14:41:12.318 | INFO     | mcp_clients.client:connect:209 - Connected to custom_instagram: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/instagram.py with 6 tools: ['instagram_get_recent_posts', 'instagram_search_hashtags', 'instagram_find_user_by_name', 'instagram_get_user_stories', 'instagram_get_user_followers', 'instagram_get_user_following']
+2025-12-11 14:41:12.319 | INFO     | mcp_clients.client:add_server:338 - Server custom_instagram provides 6 tools
+2025-12-11 14:41:12.319 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_instagram
+2025-12-11 14:41:12.319 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: instagram
+2025-12-11 14:41:12.319 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_kakoo_talk: kakoo_talk
+2025-12-11 14:41:12.319 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_kakoo_talk: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/kakoo_talk.py
+2025-12-11 14:41:12.550 | INFO     | mcp_clients.client:connect:209 - Connected to custom_kakoo_talk: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/kakoo_talk.py with 6 tools: ['kakoo_talk_get_recent_messages', 'kakoo_talk_search_contacts', 'kakoo_talk_get_chat_images', 'kakoo_talk_get_unread_messages_count', 'kakoo_talk_get_chat_files', 'kakoo_talk_get_chat_participants']
+2025-12-11 14:41:12.553 | INFO     | mcp_clients.client:add_server:338 - Server custom_kakoo_talk provides 6 tools
+2025-12-11 14:41:12.553 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_kakoo_talk
+2025-12-11 14:41:12.553 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: kakoo_talk
+2025-12-11 14:41:12.553 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_podcast: podcast
+2025-12-11 14:41:12.553 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_podcast: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/podcast.py
+2025-12-11 14:41:12.780 | INFO     | mcp_clients.client:connect:209 - Connected to custom_podcast: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/podcast.py with 5 tools: ['podcast_get_recent_episodes', 'podcast_search_shows_by_keyword', 'podcast_get_show_recommendations', 'podcast_get_episode_details', 'podcast_get_followed_shows']
+2025-12-11 14:41:12.782 | INFO     | mcp_clients.client:add_server:338 - Server custom_podcast provides 5 tools
+2025-12-11 14:41:12.782 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_podcast
+2025-12-11 14:41:12.782 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: podcast
+2025-12-11 14:41:12.782 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_snapchat: snapchat
+2025-12-11 14:41:12.783 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_snapchat: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/snapchat.py
+2025-12-11 14:41:13.019 | INFO     | mcp_clients.client:connect:209 - Connected to custom_snapchat: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/snapchat.py with 6 tools: ['snapchat_get_recent_snaps', 'snapchat_search_friends_by_name', 'snapchat_get_story_updates', 'snapchat_send_snap_to_friend', 'snapchat_get_chat_history_with_friend', 'snapchat_get_friend_suggestions']
+2025-12-11 14:41:13.021 | INFO     | mcp_clients.client:add_server:338 - Server custom_snapchat provides 6 tools
+2025-12-11 14:41:13.021 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_snapchat
+2025-12-11 14:41:13.021 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: snapchat
+2025-12-11 14:41:13.021 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_spotify: spotify
+2025-12-11 14:41:13.021 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_spotify: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/spotify.py
+2025-12-11 14:41:13.244 | INFO     | mcp_clients.client:connect:209 - Connected to custom_spotify: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/spotify.py with 6 tools: ['spotify_get_recently_played_tracks', 'spotify_search_tracks_by_keyword', 'spotify_get_user_top_artists', 'spotify_get_playlist_details', 'spotify_get_user_top_tracks', 'spotify_get_playlist_recommendations']
+2025-12-11 14:41:13.246 | INFO     | mcp_clients.client:add_server:338 - Server custom_spotify provides 6 tools
+2025-12-11 14:41:13.246 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_spotify
+2025-12-11 14:41:13.246 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: spotify
+2025-12-11 14:41:13.247 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_walmart: walmart
+2025-12-11 14:41:13.247 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_walmart: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/walmart.py
+2025-12-11 14:41:13.477 | INFO     | mcp_clients.client:connect:209 - Connected to custom_walmart: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/walmart.py with 6 tools: ['walmart_get_recent_purchases', 'walmart_search_products', 'walmart_get_store_hours', 'walmart_get_user_cart', 'walmart_get_order_status', 'walmart_get_featured_deals']
+2025-12-11 14:41:13.479 | INFO     | mcp_clients.client:add_server:338 - Server custom_walmart provides 6 tools
+2025-12-11 14:41:13.479 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_walmart
+2025-12-11 14:41:13.479 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: walmart
+2025-12-11 14:41:13.480 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_whatsapp: whatsapp
+2025-12-11 14:41:13.480 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_whatsapp: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/whatsapp.py
+2025-12-11 14:41:13.711 | INFO     | mcp_clients.client:connect:209 - Connected to custom_whatsapp: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/whatsapp.py with 6 tools: ['whatsapp_get_recent_chats', 'whatsapp_search_documents', 'whatsapp_find_contact_by_name', 'whatsapp_get_shared_images', 'whatsapp_get_call_history', 'whatsapp_get_group_chats']
+2025-12-11 14:41:13.712 | INFO     | mcp_clients.client:add_server:338 - Server custom_whatsapp provides 6 tools
+2025-12-11 14:41:13.712 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_whatsapp
+2025-12-11 14:41:13.712 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: whatsapp
+2025-12-11 14:41:13.712 | INFO     | mcp_clients.manager:connect_to_servers:83 - Connecting to custom server custom_youtube: youtube
+2025-12-11 14:41:13.712 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: custom_youtube: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/youtube.py
+2025-12-11 14:41:13.940 | INFO     | mcp_clients.client:connect:209 - Connected to custom_youtube: /home/hss/code/GenerativeUI_2025/mcp_host/mcp_clients/user_client/custom_mcp_servers/third_party/youtube.py with 6 tools: ['youtube_get_recent_videos', 'youtube_search_videos_by_keyword', 'youtube_get_video_comments', 'youtube_get_channel_subscribers', 'youtube_get_video_likes', 'youtube_get_video_recommendations']
+2025-12-11 14:41:13.942 | INFO     | mcp_clients.client:add_server:338 - Server custom_youtube provides 6 tools
+2025-12-11 14:41:13.942 | INFO     | mcp_clients.client:add_server:340 - Successfully added server custom_youtube
+2025-12-11 14:41:13.942 | INFO     | mcp_clients.manager:connect_to_servers:89 - Successfully connected to custom server: youtube
+2025-12-11 14:41:13.943 | INFO     | mcp_clients.manager:connect_to_servers:99 - Connecting to external MCP servers...
+2025-12-11 14:41:13.943 | INFO     | mcp_clients.manager:connect_to_servers:106 - Connecting to external server external_sequentialthinking: sequentialthinking
+2025-12-11 14:41:13.943 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: external_sequentialthinking: npm exec --yes --package @modelcontextprotocol/server-sequential-thinking -- mcp-server-sequential-thinking --stdio
+2025-12-11 14:41:14.260 | INFO     | mcp_clients.client:connect:209 - Connected to external_sequentialthinking: npm exec --yes --package @modelcontextprotocol/server-sequential-thinking -- mcp-server-sequential-thinking --stdio with 1 tools: ['sequentialthinking']
+2025-12-11 14:41:14.261 | INFO     | mcp_clients.client:add_server:338 - Server external_sequentialthinking provides 1 tools
+2025-12-11 14:41:14.261 | INFO     | mcp_clients.client:add_server:340 - Successfully added server external_sequentialthinking
+2025-12-11 14:41:14.261 | INFO     | mcp_clients.manager:connect_to_servers:112 - ✅ Successfully connected to external server: sequentialthinking
+2025-12-11 14:41:14.261 | INFO     | mcp_clients.manager:connect_to_servers:106 - Connecting to external server external_brave-search: brave-search
+2025-12-11 14:41:14.261 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: external_brave-search: npm exec --yes --package @modelcontextprotocol/server-brave-search -- mcp-server-brave-search --stdio
+2025-12-11 14:41:14.780 | INFO     | mcp_clients.client:connect:209 - Connected to external_brave-search: npm exec --yes --package @modelcontextprotocol/server-brave-search -- mcp-server-brave-search --stdio with 2 tools: ['brave_web_search', 'brave_local_search']
+2025-12-11 14:41:14.780 | INFO     | mcp_clients.client:add_server:338 - Server external_brave-search provides 2 tools
+2025-12-11 14:41:14.780 | INFO     | mcp_clients.client:add_server:340 - Successfully added server external_brave-search
+2025-12-11 14:41:14.780 | INFO     | mcp_clients.manager:connect_to_servers:112 - ✅ Successfully connected to external server: brave-search
+2025-12-11 14:41:14.781 | INFO     | mcp_clients.manager:init_mcp_client:154 - MCP Client initialized successfully with 26/26 servers connected
+2025-12-11 14:41:14.781 | INFO     | mcp_clients.manager:init_mcp_client:158 - Connected servers: ['custom_memory', 'custom_samsung_calendar', 'custom_samsung_contacts', 'custom_samsung_gallery', 'custom_samsung_health', 'custom_samsung_internet', 'custom_samsung_messages', 'custom_samsung_music', 'custom_samsung_my_files', 'custom_samsung_notes', 'custom_samsung_pay', 'custom_samsung_reminders', 'custom_samsung_settings', 'custom_samsung_smartthings', 'custom_amazon', 'custom_gmail', 'custom_instagram', 'custom_kakoo_talk', 'custom_podcast', 'custom_snapchat', 'custom_spotify', 'custom_walmart', 'custom_whatsapp', 'custom_youtube', 'external_sequentialthinking', 'external_brave-search']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:171 - Available tools by server:
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   memory: ['memory_get_recent_items', 'memory_search_documents', 'memory_find_contact_by_name', 'memory_get_favorite_images', 'memory_list_upcoming_events', 'memory_get_recent_messages']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_calendar: ['samsung_calendar_get_upcoming_events', 'samsung_calendar_get_event_details', 'samsung_calendar_list_all_events']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_contacts: ['samsung_contacts_get_recent_contacts', 'samsung_contacts_search_contacts_by_name', 'samsung_contacts_get_contact_details']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_gallery: ['samsung_gallery_get_recent_photos', 'samsung_gallery_search_photos_by_location', 'samsung_gallery_get_photo_details', 'samsung_gallery_get_photos_by_date_range', 'samsung_gallery_get_photos_by_event']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_health: ['samsung_health_get_recent_steps', 'samsung_health_get_sleep_data', 'samsung_health_get_heart_rate', 'samsung_health_get_calories_burned', 'samsung_health_get_water_intake', 'samsung_health_get_weight']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_internet: ['samsung_internet_get_recent_bookmarks', 'samsung_internet_search_browsing_history', 'samsung_internet_get_open_tabs']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_messages: ['samsung_messages_get_recent_messages', 'samsung_messages_search_messages_by_keyword', 'samsung_messages_find_contact_by_name', 'samsung_messages_get_message_attachments', 'samsung_messages_get_conversation_history']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_music: ['samsung_music_get_recent_played_tracks', 'samsung_music_search_music_by_keyword', 'samsung_music_get_playlist_details', 'samsung_music_get_top_artists', 'samsung_music_get_album_info', 'samsung_music_get_favorite_tracks']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_my_files: ['samsung_my_files_get_recent_items', 'samsung_my_files_search_documents', 'samsung_my_files_find_contact_by_name', 'samsung_my_files_get_images_by_date', 'samsung_my_files_list_files_in_directory', 'samsung_my_files_get_file_details']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_notes: ['samsung_notes_get_recent_notes', 'samsung_notes_search_notes_by_keyword', 'samsung_notes_get_note_by_id', 'samsung_notes_get_notes_by_date_range', 'samsung_notes_get_shared_notes', 'samsung_notes_get_notes_with_attachments']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_pay: ['samsung_pay_get_recent_transactions', 'samsung_pay_search_transactions_by_merchant', 'samsung_pay_get_monthly_spending_summary', 'samsung_pay_find_contact_by_transaction', 'samsung_pay_get_favorite_merchants', 'samsung_pay_get_transaction_details']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_reminders: ['samsung_reminders_get_recent_reminders', 'samsung_reminders_search_reminders_by_keyword', 'samsung_reminders_get_reminders_by_date']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_settings: ['samsung_settings_get_recent_wifi_networks', 'samsung_settings_get_bluetooth_devices', 'samsung_settings_get_recent_notifications', 'samsung_settings_get_recent_calls', 'samsung_settings_get_recent_messages', 'samsung_settings_get_recent_app_usage']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   samsung_smartthings: ['samsung_smartthings_get_recent_devices', 'samsung_smartthings_search_scenes', 'samsung_smartthings_get_device_status', 'samsung_smartthings_list_automations', 'samsung_smartthings_get_energy_usage', 'samsung_smartthings_get_device_location']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   amazon: ['amazon_get_recent_orders', 'amazon_search_products', 'amazon_get_order_details', 'amazon_get_recommended_products', 'amazon_get_user_reviews', 'amazon_get_user_wishlist']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   gmail: ['gmail_get_recent_emails', 'gmail_search_emails_by_keyword', 'gmail_find_contact_by_name', 'gmail_get_unread_emails', 'gmail_get_email_attachments', 'gmail_send_email']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   instagram: ['instagram_get_recent_posts', 'instagram_search_hashtags', 'instagram_find_user_by_name', 'instagram_get_user_stories', 'instagram_get_user_followers', 'instagram_get_user_following']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   kakoo_talk: ['kakoo_talk_get_recent_messages', 'kakoo_talk_search_contacts', 'kakoo_talk_get_chat_images', 'kakoo_talk_get_unread_messages_count', 'kakoo_talk_get_chat_files', 'kakoo_talk_get_chat_participants']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   podcast: ['podcast_get_recent_episodes', 'podcast_search_shows_by_keyword', 'podcast_get_show_recommendations', 'podcast_get_episode_details', 'podcast_get_followed_shows']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   snapchat: ['snapchat_get_recent_snaps', 'snapchat_search_friends_by_name', 'snapchat_get_story_updates', 'snapchat_send_snap_to_friend', 'snapchat_get_chat_history_with_friend', 'snapchat_get_friend_suggestions']
+2025-12-11 14:41:14.828 | INFO     | mcp_clients.manager:init_mcp_client:173 -   spotify: ['spotify_get_recently_played_tracks', 'spotify_search_tracks_by_keyword', 'spotify_get_user_top_artists', 'spotify_get_playlist_details', 'spotify_get_user_top_tracks', 'spotify_get_playlist_recommendations']
+2025-12-11 14:41:14.829 | INFO     | mcp_clients.manager:init_mcp_client:173 -   walmart: ['walmart_get_recent_purchases', 'walmart_search_products', 'walmart_get_store_hours', 'walmart_get_user_cart', 'walmart_get_order_status', 'walmart_get_featured_deals']
+2025-12-11 14:41:14.829 | INFO     | mcp_clients.manager:init_mcp_client:173 -   whatsapp: ['whatsapp_get_recent_chats', 'whatsapp_search_documents', 'whatsapp_find_contact_by_name', 'whatsapp_get_shared_images', 'whatsapp_get_call_history', 'whatsapp_get_group_chats']
+2025-12-11 14:41:14.829 | INFO     | mcp_clients.manager:init_mcp_client:173 -   youtube: ['youtube_get_recent_videos', 'youtube_search_videos_by_keyword', 'youtube_get_video_comments', 'youtube_get_channel_subscribers', 'youtube_get_video_likes', 'youtube_get_video_recommendations']
+2025-12-11 14:41:14.829 | INFO     | mcp_clients.manager:init_mcp_client:173 -   sequentialthinking: ['sequentialthinking']
+2025-12-11 14:41:14.829 | INFO     | mcp_clients.manager:init_mcp_client:173 -   brave-search: ['brave_web_search', 'brave_local_search']
+2025-12-11 14:41:14.921 | INFO     | mcp_clients.manager:generate_mcp_guide:454 - MCP guide generated successfully: mcp_guide.md
+2025-12-11 14:41:14.921 | INFO     | mcp_clients.service:initialize:122 - [user_client] MCPService (user_client) initialization completed successfully
+2025-12-11 14:41:14.921 | INFO     | mcp_clients.manager:init_mcp_client:133 - Found 1 external MCP servers
+2025-12-11 14:41:14.935 | INFO     | mcp_clients.client:__init__:294 - BaseMCPClient initialized (model=claude-sonnet-4-20250514)
+2025-12-11 14:41:14.935 | INFO     | mcp_clients.manager:connect_to_servers:99 - Connecting to external MCP servers...
+2025-12-11 14:41:14.935 | INFO     | mcp_clients.manager:connect_to_servers:106 - Connecting to external server external_sequentialthinking: sequentialthinking
+2025-12-11 14:41:14.935 | INFO     | mcp_clients.client:connect:197 - Connecting to MCP server: external_sequentialthinking: npm exec --yes --package @modelcontextprotocol/server-sequential-thinking -- mcp-server-sequential-thinking --stdio
+2025-12-11 14:41:15.267 | INFO     | mcp_clients.client:connect:209 - Connected to external_sequentialthinking: npm exec --yes --package @modelcontextprotocol/server-sequential-thinking -- mcp-server-sequential-thinking --stdio with 1 tools: ['sequentialthinking']
+2025-12-11 14:41:15.268 | INFO     | mcp_clients.client:add_server:338 - Server external_sequentialthinking provides 1 tools
+2025-12-11 14:41:15.268 | INFO     | mcp_clients.client:add_server:340 - Successfully added server external_sequentialthinking
+2025-12-11 14:41:15.268 | INFO     | mcp_clients.manager:connect_to_servers:112 - ✅ Successfully connected to external server: sequentialthinking
+2025-12-11 14:41:15.268 | INFO     | mcp_clients.manager:init_mcp_client:154 - MCP Client initialized successfully with 1/1 servers connected
+2025-12-11 14:41:15.268 | INFO     | mcp_clients.manager:init_mcp_client:158 - Connected servers: ['external_sequentialthinking']
+2025-12-11 14:41:15.269 | INFO     | mcp_clients.manager:init_mcp_client:171 - Available tools by server:
+2025-12-11 14:41:15.269 | INFO     | mcp_clients.manager:init_mcp_client:173 -   sequentialthinking: ['sequentialthinking']
+2025-12-11 14:41:15.270 | INFO     | mcp_clients.manager:generate_mcp_guide:454 - MCP guide generated successfully: mcp_guide.md
+2025-12-11 14:41:15.270 | INFO     | mcp_clients.service:initialize:122 - [genui_client] MCPService (genui_client) initialization completed successfully
+2025-12-11 14:41:15.270 | INFO     | __main__:lifespan:114 - MCP Services initialized successfully
+2025-12-11 14:41:15.270 | INFO     | __main__:lifespan:115 - Application startup completed successfully
+2025-12-11 14:41:15.271 | INFO     | __main__:lifespan:124 - Shutting down Socket.IO MCP Host application...
+2025-12-11 14:41:15.271 | INFO     | mcp_clients.client:cleanup:463 - Cleaning up BaseMCPClient resources...
+2025-12-11 14:41:15.275 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_memory
+2025-12-11 14:41:15.278 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_calendar
+2025-12-11 14:41:15.281 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_contacts
+2025-12-11 14:41:15.283 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_gallery
+2025-12-11 14:41:15.286 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_health
+2025-12-11 14:41:15.289 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_internet
+2025-12-11 14:41:15.292 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_messages
+2025-12-11 14:41:15.295 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_music
+2025-12-11 14:41:15.298 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_my_files
+2025-12-11 14:41:15.301 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_notes
+2025-12-11 14:41:15.304 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_pay
+2025-12-11 14:41:15.307 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_reminders
+2025-12-11 14:41:15.310 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_settings
+2025-12-11 14:41:15.313 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_samsung_smartthings
+2025-12-11 14:41:15.316 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_amazon
+2025-12-11 14:41:15.318 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_gmail
+2025-12-11 14:41:15.321 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_instagram
+2025-12-11 14:41:15.323 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_kakoo_talk
+2025-12-11 14:41:15.326 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_podcast
+2025-12-11 14:41:15.328 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_snapchat
+2025-12-11 14:41:15.330 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_spotify
+2025-12-11 14:41:15.333 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_walmart
+2025-12-11 14:41:15.336 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_whatsapp
+2025-12-11 14:41:15.338 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server custom_youtube
+2025-12-11 14:41:15.341 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server external_sequentialthinking
+2025-12-11 14:41:15.344 | INFO     | mcp_clients.client:cleanup:477 - Successfully cleaned up server external_brave-search
+2025-12-11 14:41:15.344 | INFO     | mcp_clients.client:cleanup:492 - BaseMCPClient cleanup completed
+2025-12-11 14:41:15.344 | INFO     | mcp_clients.manager:cleanup_mcp_client:198 - MCP Client cleaned up successfully
+2025-12-11 14:41:15.344 | INFO     | mcp_clients.service:cleanup:143 - [user_client] MCPService (user_client) cleanup completed
+2025-12-11 14:41:15.344 | INFO     | __main__:lifespan:127 - MCP User Service cleanup completed successfully
+2025-12-11 14:41:15.344 | INFO     | mcp_clients.client:cleanup:463 - Cleaning up BaseMCPClient resources...
