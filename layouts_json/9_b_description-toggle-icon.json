@@ -1,0 +1,84 @@
+{
+  "name": "Description + Toggle(icon)",
+  "layout": "9-b",
+  "description": "리스트 항목마다 on/off, enable/disable 같은 이진 상태 제어가 필요할 때\n리스트 항목마다 타입/상태/분류 등을 이미지로 구분해야할 때 (이미지가 있어야 빠르게 구분 가능할 때)",
+  "contents_type": "middle",
+  "parameters": {
+    "title": {
+      "description": "정보를 요약한 내용",
+      "type": "string",
+      "example": "9번째 레이아웃 B"
+    },
+    "text_description": {
+      "description": "전체 내용을 요약하거나, 아래 리스트 내용을 뽑은 이유 ",
+      "type": "string",
+      "example": "Lorem ipsum dolor sit amet consectetur.<br/>Eget pellentesque nec consectetur tempus turpis ultrices."
+    },
+    "toggle_list": {
+      "description": "toggle 되는 항목의 리스트",
+      "type": "array",
+      "data": {
+        "list_thumbnail": {
+          "description": " 리스트 항목을 대표하는 이미지(image path) ",
+          "type": "string"
+        },
+        "list_subject": {
+          "type": "string"
+        },
+        "list_content": {
+          "type": "string"
+        },
+        "list_toggle": {
+          "description": "on/off 상태",
+          "type": "boolean"
+        }
+      },
+      "example": [
+        {
+          "list_thumbnail": "../assets/image/img-box.jpg",
+          "list_subject": "subject 1",
+          "list_content": "content 1",
+          "list_toggle": true
+        },
+        {
+          "list_thumbnail": "../assets/image/img-box.jpg",
+          "list_subject": "subject 1",
+          "list_content": "content 1",
+          "list_toggle": false
+        },
+        {
+          "list_thumbnail": "../assets/image/img-box.jpg",
+          "list_subject": "subject 1",
+          "list_content": "content 1",
+          "list_toggle": false
+        }
+      ]
+    }
+  },
+  "file": "9_b_description-toggle-icon.html",
+  "sample": {
+    "title": "9번째 레이아웃 B",
+    "text_description": "Lorem ipsum dolor sit amet consectetur.<br/>Eget pellentesque nec consectetur tempus turpis ultrices.",
+    "toggle_list": [
+      {
+        "list_thumbnail": "../assets/image/img-box.jpg",
+        "list_subject": "subject 1",
+        "list_content": "content 1",
+        "list_toggle": true
+      },
+      {
+        "list_thumbnail": "../assets/image/img-box.jpg",
+        "list_subject": "subject 1",
+        "list_content": "content 1",
+        "list_toggle": false
+      },
+      {
+        "list_thumbnail": "../assets/image/img-box.jpg",
+        "list_subject": "subject 1",
+        "list_content": "content 1",
+        "list_toggle": false
+      }
+    ]
+  },
+  "html": "<div class=\"widget\"><p class=\"widget--title\">{{ data.title }}</p><p class=\"widget--desc\" v-html=\"data.text_description\"></p><div class=\"widget--list\"><div class=\"widget--list__box is--thumb-toggle\" v-for=\"item in data.toggle_list\"><div class=\"icon thumb\"><img v-bind:src=\"item.list_thumbnail\" alt=\"thumbnail img\"></div><div class=\"widget--list__textbox\"><div class=\"widget--list__text\"><p class=\"title\">{{ item.list_subject }}</p><p class=\"text\">{{ item.list_content }}</p></div><label for=\"\" class=\"forms--toggle\"><input type=\"checkbox\" :checked=\"item.list_toggle\"> <span class=\"forms--toggle__icon\"></span></label></div></div></div></div>"
+}

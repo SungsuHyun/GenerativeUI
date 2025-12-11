@@ -1,0 +1,64 @@
+{
+  "name": "Visual + Number list",
+  "layout": 4,
+  "description": "동일한 유형의 정보를 여러개 나열할 때 (리스트 사용 시)\n리스트 정보에 우선순위, 순서, 단계가 핵심일 때\nvisual(이미지, 그래프, 지도 등)을 포함할 때",
+  "contents_type": "middle",
+  "parameters": {
+    "title": {
+      "description": "정보를 요약한 내용",
+      "type": "string",
+      "example": "4번"
+    },
+    "visual": {
+      "description": "정보와 관련된 시각정보",
+      "type": "string",
+      "example": "../assets/image/img-box.jpg"
+    },
+    "number_list": {
+      "description": "list에 추가될 항목",
+      "type": "array",
+      "data": {
+        "number": {
+          "description": "순서, 시간, 날짜 등 오름차순",
+          "type": "int"
+        },
+        "list_subject": {
+          "type": "string"
+        },
+        "list_content": {
+          "type": "string"
+        }
+      },
+      "example": [
+        {
+          "number": 1,
+          "list_subject": "subject 1",
+          "list_content": "content 1"
+        },
+        {
+          "number": 2,
+          "list_subject": "subject 2",
+          "list_content": "content 2"
+        }
+      ]
+    }
+  },
+  "file": "4_visual-number-list.html",
+  "sample": {
+    "title": "4번",
+    "visual": "../assets/image/img-box.jpg",
+    "number_list": [
+      {
+        "number": 1,
+        "list_subject": "subject 1",
+        "list_content": "content 1"
+      },
+      {
+        "number": 2,
+        "list_subject": "subject 2",
+        "list_content": "content 2"
+      }
+    ]
+  },
+  "html": "<div class=\"widget\"><p class=\"widget--title\">{{ data.title }}</p><div class=\"widget--img\"><img v-bind:src=\"data.visual\" alt=\"img\" class=\"widget--img\"></div><div class=\"widget--list\"><div class=\"widget--list__box is--number\" v-for=\"item in data.number_list\"><p class=\"number\">{{ item.number }}</p><div class=\"widget--list__text\"><p class=\"title\">{{ item.list_subject }}</p><p class=\"text\">{{ item.list_content }}</p></div></div></div></div>"
+}

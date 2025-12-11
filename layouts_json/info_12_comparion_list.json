@@ -1,0 +1,68 @@
+{
+  "name": "Comparison list",
+  "layout": "info_12",
+  "description": "Displays a side-by-side comparison of exactly two items. This is ideal for comparing weather, game results, prices, or any two corresponding data points.",
+  "contents_type": "middle",
+  "examples": [
+    "Compare the weather in Seoul and Paris.",
+    "Compare the results of the baseball game.",
+    "Compare the calories of the food I ate yesterday."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the entire comparison view (e.g., 'Weather Comparison', 'Game Results').",
+      "type": "string",
+      "example": "정보제공 12번"
+    },
+    "compare_list": {
+      "description": "An array containing exactly two items to be compared side-by-side.",
+      "type": "array",
+      "data": {
+        "title": {
+          "description": "The name of the item being compared (e.g., 'Seoul', 'Paris').",
+          "type": "string",
+          "max_words": 2
+        },
+        "main_content": {
+          "description": "The primary value or data point for the comparison (e.g., '25°C', 'Sunny').",
+          "type": "string",
+          "max_words": 1,
+          "max_letters": 3
+        },
+        "brief_info": {
+          "description": "Supplementary information for the item, such as a date or a brief note.",
+          "type": "string"
+        }
+      },
+      "example": [
+        {
+          "title": "Seoul",
+          "main_content": "31°",
+          "brief_info": "15:05 PM"
+        },
+        {
+          "title": "Paris",
+          "main_content": "25°",
+          "brief_info": "08:05 AM"
+        }
+      ]
+    }
+  },
+  "file": "info_12_comparion_list.html",
+  "sample": {
+    "component_title": "정보제공 12번",
+    "compare_list": [
+      {
+        "title": "Seoul",
+        "main_content": "31°",
+        "brief_info": "15:05 PM"
+      },
+      {
+        "title": "Paris",
+        "main_content": "25°",
+        "brief_info": "08:05 AM"
+      }
+    ]
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--list is--compare\"><template v-for=\"(item, index) in data.compare_list\"><div class=\"widget--item\"><p class=\"title\">{{ item.title }}</p><p class=\"content\">{{ item.main_content }}</p><p class=\"date\">{{ item.brief_info }}</p></div><p class=\"widget--divider\" v-if=\"index == 0\"></p></template></div></div>"
+}

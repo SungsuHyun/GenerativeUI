@@ -1,0 +1,72 @@
+{
+  "name": "Number/Timeline list",
+  "layout": "info_2",
+  "description": "Displays a list of items in a specific sequence, indicated by a number or time. This is perfect for showing information where order is critical, such as daily schedules (timelines), step-by-step instructions, recipes, or process flows.",
+  "contents_type": "middle",
+  "examples": [
+    "What is my schedule for today?",
+    "How do I make spaghetti?",
+    "Create an itinerary for my trip."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the entire list (e.g., 'Today's Schedule', 'Spaghetti Recipe').",
+      "type": "string",
+      "example": "정보제공 2번"
+    },
+    "timeline_list": {
+      "description": "An array of items to be displayed in a numbered or chronological sequence. Recommended 1-5 items.",
+      "type": "array",
+      "data": {
+        "list_subject": {
+          "description": "A short subject or heading for the list item. (Note: Text may be truncated with '...' if it exceeds display limits).",
+          "type": "string",
+          "format": [
+            "HH:MM",
+            "MM:DD",
+            "MM-DD"
+          ]
+        },
+        "list_content": {
+          "description": "The detailed description or content for the list item.",
+          "type": "string",
+          "max_words": 3
+        }
+      },
+      "max": 3,
+      "example": [
+        {
+          "list_subject": "17:00",
+          "list_content": "Dinner with Mom"
+        },
+        {
+          "list_subject": "19:00",
+          "list_content": "Running"
+        },
+        {
+          "list_subject": "21:00",
+          "list_content": "Reading book"
+        }
+      ]
+    }
+  },
+  "file": "info_2_number_timeline_list.html",
+  "sample": {
+    "component_title": "정보제공 2번",
+    "timeline_list": [
+      {
+        "list_subject": "17:00",
+        "list_content": "Dinner with Mom"
+      },
+      {
+        "list_subject": "19:00",
+        "list_content": "Running"
+      },
+      {
+        "list_subject": "21:00",
+        "list_content": "Reading book"
+      }
+    ]
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--list is--timeline-list\"><div class=\"widget--item\" v-for=\"item in data.timeline_list\"><div class=\"widget--item__side\"><p class=\"timeline\">{{ item.list_subject }}</p></div><div class=\"widget--item__box\"><p class=\"title\">{{ item.list_content }}</p></div></div></div></div>"
+}

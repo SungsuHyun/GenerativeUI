@@ -1,0 +1,38 @@
+{
+  "name": "Description + direction",
+  "layout": "info_7",
+  "description": "Displays route-related information, showing the path from an origin to a destination along with the estimated travel time. This is ideal for maps, navigation, and tracking the progress of delivery or transit services.",
+  "contents_type": "middle",
+  "examples": [
+    "How do I get from point A to point B?",
+    "When will my food delivery arrive?",
+    "In how many minutes will my friend arrive?",
+    "Track my ride."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the route information card (e.g., 'Route to Work', 'Delivery Status').",
+      "type": "string",
+      "example": "정보제공 7번"
+    },
+    "hour_time": {
+      "description": "The hour part of the time.",
+      "type": "string",
+      "format": "HH",
+      "example": "02"
+    },
+    "minute_time": {
+      "description": "The minute part of the time.",
+      "type": "string",
+      "format": "MM",
+      "example": "30"
+    }
+  },
+  "file": "info_7_description_direction.html",
+  "sample": {
+    "component_title": "정보제공 7번",
+    "hour_time": "02",
+    "minute_time": "30"
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--graph is--direction\"><div class=\"bar-main\"><p><span class=\"num\">{{data.hour_time}}</span> <span class=\"text\">hr</span></p><p><span class=\"num\">{{data.minute_time}}</span> <span class=\"text\">min</span></p></div><div class=\"widget--graph__box\"><img src=\"../assets/image/graph/direction.svg\"></div></div></div>"
+}

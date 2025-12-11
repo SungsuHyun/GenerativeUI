@@ -1,0 +1,52 @@
+{
+  "name": "Text + Img (Image-focused)",
+  "layout": "info_8",
+  "description": "Specialized for displaying a single, user-requested image along with its associated details. This is used when retrieving a specific photo from a user's collection based on context like location, time, or content.",
+  "contents_type": "middle",
+  "examples": [
+    "Show me my photos from Barcelona.",
+    "Find the picture from my walk with the dog.",
+    "Show me the photos I took today."
+  ],
+  "parameters": {
+    "title": {
+      "description": "The primary title for the card, often the location where the photo was taken (e.g., 'Barcelona').",
+      "type": "string",
+      "max_words": 3,
+      "example": "Scenic bayside trail"
+    },
+    "activity_title": {
+      "description": "A short, descriptive heading for the image (e.g., 'Family Trip', 'Running').",
+      "type": "string",
+      "max_words": 2,
+      "example": "Running"
+    },
+    "info_title": {
+      "description": "Supplementary information or a sub-heading for the image.",
+      "type": "string",
+      "max_words": 3,
+      "example": "Calif. running crew"
+    },
+    "info_date": {
+      "description": "The date the photo was taken or is associated with (e.g., '2023-10-26').",
+      "type": "string",
+      "example": "2025.09.08 20PM"
+    },
+    "background_img": {
+      "tool_type": "img_search",
+      "description": "The path to the primary image that corresponds to the user's request.",
+      "type": "string",
+      "default": "../assets/image/life-bg.jpg",
+      "example": "../assets/image/life-bg.jpg"
+    }
+  },
+  "file": "info_8_text_img_life.html",
+  "sample": {
+    "title": "Scenic bayside trail",
+    "activity_title": "Running",
+    "info_title": "Calif. running crew",
+    "info_date": "2025.09.08 20PM",
+    "background_img": "../assets/image/life-bg.jpg"
+  },
+  "html": "<div class=\"widget type2 is--life\"><div class=\"widget--life__top\"><p class=\"title\">{{ data.title}}</p><p class=\"activity\">{{ data.activity_title}}</p></div><div class=\"widget--life__bottom\"><p class=\"info\">{{ data.info_title }}</p><p class=\"date\">{{ data.info_date }}</p></div><p class=\"widget--life__bg\" :style=\"{ backgroundImage: 'url(' + data.background_img + ')' }\"></p></div>"
+}

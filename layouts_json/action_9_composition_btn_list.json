@@ -1,0 +1,94 @@
+{
+  "name": "Composition Btn list",
+  "layout": "action_9",
+  "description": "Shows progress towards a total goal, broken down by its individual components. Ideal for displaying data usage, budget tracking, or project milestones.",
+  "contents_type": "middle",
+  "examples": [
+    "Show my data usage for this month.",
+    "How much is left in my monthly budget?",
+    "What's the progress on the Q3 project?"
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the component (e.g., 'Data Usage', 'Monthly Budget').",
+      "type": "string",
+      "example": "행동유도 9번"
+    },
+    "text_target": {
+      "description": "The overall target value (numeric).",
+      "type": "int",
+      "example": 128
+    },
+    "target_label": {
+      "description": "The unit or label for the overall target (e.g., 'GB', '%', '$').",
+      "type": "string",
+      "example": "Kcal"
+    },
+    "text_list": {
+      "description": "A list of items that make up the total target. Recommended 1-5 items.",
+      "type": "array",
+      "data": {
+        "list_content": {
+          "description": "The name of the individual item (e.g., 'Video Streaming').",
+          "type": "string",
+          "max_words": 3
+        },
+        "list_goal": {
+          "description": "The target value for the individual item, including its unit (e.g., '10 GB').",
+          "type": "string"
+        },
+        "list_now": {
+          "description": "The current value or progress for the individual item (numeric).",
+          "type": "int"
+        }
+      },
+      "example": [
+        {
+          "list_content": "Carbs",
+          "list_goal": "270g",
+          "list_now": 200
+        },
+        {
+          "list_content": "Protein",
+          "list_goal": "140g",
+          "list_now": 20
+        },
+        {
+          "list_content": "Fat",
+          "list_goal": "200g",
+          "list_now": 160
+        }
+      ]
+    },
+    "text_cta": {
+      "description": "The label for the Call-to-Action button (e.g., 'View Details').",
+      "type": "string",
+      "example": "meal"
+    }
+  },
+  "file": "action_9_composition_btn_list.html",
+  "sample": {
+    "component_title": "행동유도 9번",
+    "text_target": 128,
+    "target_label": "Kcal",
+    "text_list": [
+      {
+        "list_content": "Carbs",
+        "list_goal": "270g",
+        "list_now": 200
+      },
+      {
+        "list_content": "Protein",
+        "list_goal": "140g",
+        "list_now": 20
+      },
+      {
+        "list_content": "Fat",
+        "list_goal": "200g",
+        "list_now": 160
+      }
+    ],
+    "text_cta": "meal"
+  },
+  "html": "<div class=\"widget type2 is--btnlist-cta\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"btnlist-cta--goal\"><p class=\"target\">{{ data.text_target }}</p><p class=\"label\">{{ data.target_label }} left</p></div><div class=\"widget--list is--btnlist-cta text-list\"><div class=\"widget--item\" v-for=\"(item, index) in data.text_list\" :key=\"index\"><div class=\"widget--item__box\"><p class=\"title\">{{ item.list_content }}</p><p class=\"goal\"><strong>{{ item.list_now }} / </strong><span>{{ item.list_goal }}</span></p></div></div></div><button type=\"button\" class=\"btnlist-cta__call\">Call with {{ data.text_cta }}</button></div>"
+}

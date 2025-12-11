@@ -1,0 +1,85 @@
+{
+  "name": "Description + Check list",
+  "layout": "10",
+  "description": "여러 항목을 선택/확인해야 할 때",
+  "contents_type": "middle",
+  "parameters": {
+    "title": {
+      "description": "정보를 요약한 내용",
+      "type": "string",
+      "example": "10번"
+    },
+    "text_description": {
+      "description": "전체 내용을 요약하거나, 아래 리스트 내용을 뽑은 이유 ",
+      "type": "string",
+      "example": "Lorem ipsum dolor sit amet consectetur.<br/>Eget pellentesque nec consectetur tempus turpis ultrices."
+    },
+    "check_list": {
+      "description": "check box와 항목의 리스트",
+      "type": "array",
+      "data": {
+        "list_check": {
+          "description": "checking 상태",
+          "type": "boolean"
+        },
+        "list_subject": {
+          "type": "string"
+        }
+      },
+      "example": [
+        {
+          "list_check": true,
+          "list_subject": "subject 1"
+        },
+        {
+          "list_check": false,
+          "list_subject": "subject 2"
+        },
+        {
+          "list_check": false,
+          "list_subject": "subject 3"
+        },
+        {
+          "list_check": false,
+          "list_subject": "subject 4"
+        }
+      ]
+    },
+    "button1": {
+      "description": "취소/이전 버튼",
+      "type": "string",
+      "example": "Button 1"
+    },
+    "button2": {
+      "description": "다음단계/완료 수행하는 버튼",
+      "type": "Text",
+      "example": "Button 2"
+    }
+  },
+  "file": "10_description-check-list.html",
+  "sample": {
+    "title": "10번",
+    "text_description": "Lorem ipsum dolor sit amet consectetur.<br/>Eget pellentesque nec consectetur tempus turpis ultrices.",
+    "check_list": [
+      {
+        "list_check": true,
+        "list_subject": "subject 1"
+      },
+      {
+        "list_check": false,
+        "list_subject": "subject 2"
+      },
+      {
+        "list_check": false,
+        "list_subject": "subject 3"
+      },
+      {
+        "list_check": false,
+        "list_subject": "subject 4"
+      }
+    ],
+    "button1": "Button 1",
+    "button2": "Button 2"
+  },
+  "html": "<div class=\"widget\"><p class=\"widget--title\">{{ data.title }}</p><p class=\"widget--desc\" v-html=\"data.text_description\"></p><div class=\"widget--list\"><div class=\"widget--list__box is--check\" v-for=\"item in data.check_list\"><label for=\"\" class=\"forms--check\"><input type=\"checkbox\" :checked=\"item.list_check\"> <span class=\"forms--check__icon\"></span> <span class=\"forms--check__text\">{{ item.list_subject }}</span></label></div></div><div class=\"widget--button\"><button type=\"button\">{{ data.button1 }}</button> <button type=\"button\">{{ data.button2 }}</button></div></div>"
+}

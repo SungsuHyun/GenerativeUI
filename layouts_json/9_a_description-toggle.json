@@ -1,0 +1,65 @@
+{
+  "name": "Description + Toggle",
+  "layout": "9-a",
+  "description": "리스트 항목마다 on/off, enable/disable 같은 이진 상태 제어가 필요할 때",
+  "contents_type": "middle",
+  "parameters": {
+    "title": {
+      "description": "정보를 요약한 내용",
+      "type": "string",
+      "example": "9번째 레이아웃 A"
+    },
+    "text_description": {
+      "description": "전체 내용을 요약하거나, 아래 리스트 내용을 뽑은 이유 ",
+      "type": "string",
+      "example": "Lorem ipsum dolor sit amet consectetur.<br/>Eget pellentesque nec consectetur tempus turpis ultrices."
+    },
+    "toggle_list": {
+      "description": "toggle 되는 항목의 리스트",
+      "type": "array",
+      "data": {
+        "list_subject": {
+          "type": "string"
+        },
+        "list_toggle": {
+          "description": "on/off 상태",
+          "type": "boolean"
+        }
+      },
+      "example": [
+        {
+          "list_subject": "subject 1",
+          "list_toggle": true
+        },
+        {
+          "list_subject": "subject 2",
+          "list_toggle": false
+        },
+        {
+          "list_subject": "subject 3",
+          "list_toggle": false
+        }
+      ]
+    }
+  },
+  "file": "9_a_description-toggle.html",
+  "sample": {
+    "title": "9번째 레이아웃 A",
+    "text_description": "Lorem ipsum dolor sit amet consectetur.<br/>Eget pellentesque nec consectetur tempus turpis ultrices.",
+    "toggle_list": [
+      {
+        "list_subject": "subject 1",
+        "list_toggle": true
+      },
+      {
+        "list_subject": "subject 2",
+        "list_toggle": false
+      },
+      {
+        "list_subject": "subject 3",
+        "list_toggle": false
+      }
+    ]
+  },
+  "html": "<div class=\"widget\"><p class=\"widget--title\">{{ data.title }}</p><p class=\"widget--desc\" v-html=\"data.text_description\"></p><div class=\"widget--list\"><div class=\"widget--list__box is--toggle\" v-for=\"item in data.toggle_list\"><p class=\"title\">{{ item.list_subject }}</p><label for=\"\" class=\"forms--toggle\"><input type=\"checkbox\" :checked=\"item.list_toggle\"> <span class=\"forms--toggle__icon\"></span></label></div></div></div>"
+}

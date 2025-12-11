@@ -1,0 +1,82 @@
+{
+  "name": "Message + Visual",
+  "layout": "6",
+  "description": "메세지 리스트를 호출할 때\nvisual(이미지, 그래프, 지도 등)을 포함할 때",
+  "contents_type": "middle",
+  "parameters": {
+    "title": {
+      "description": "정보를 요약한 내용",
+      "type": "string",
+      "example": "6번"
+    },
+    "message_list": {
+      "description": "수신한 메세지 list",
+      "type": "array",
+      "data": {
+        "list_profile": {
+          "description": "인물사진(image path)",
+          "type": "string"
+        },
+        "list_message_name": {
+          "description": "사람의 영어 이름",
+          "type": "string"
+        },
+        "list_time": {
+          "description": "메세지 수신 시간(HH:MM)",
+          "type": "timestamp"
+        },
+        "list_message_contents": {
+          "description": "대화 내용, 100자 이내, 내용이 중간에 끊기면 ... 표기",
+          "type": "string"
+        },
+        "list_alarm": {
+          "description": "메세지 수신 알림 개수",
+          "type": "int"
+        }
+      },
+      "example": [
+        {
+          "list_profile": "../assets/image/icon/icon-message.svg",
+          "list_message_name": "_name 1_",
+          "list_time": "12:40",
+          "list_message_contents": "_contents 1_",
+          "list_alarm": 1
+        },
+        {
+          "list_profile": "../assets/image/icon/icon-message.svg",
+          "list_message_name": "Lindsey Smith",
+          "list_time": "12:40",
+          "list_message_contents": "Hi I’m BACK!!<br />We should meet to up.",
+          "list_alarm": 1
+        }
+      ]
+    },
+    "visual": {
+      "description": "정보와 관련된 시각정보(image path)",
+      "type": "string",
+      "example": "../assets/image/img-box.jpg"
+    }
+  },
+  "file": "6_message-visual.html",
+  "sample": {
+    "title": "6번",
+    "message_list": [
+      {
+        "list_profile": "../assets/image/icon/icon-message.svg",
+        "list_message_name": "_name 1_",
+        "list_time": "12:40",
+        "list_message_contents": "_contents 1_",
+        "list_alarm": 1
+      },
+      {
+        "list_profile": "../assets/image/icon/icon-message.svg",
+        "list_message_name": "Lindsey Smith",
+        "list_time": "12:40",
+        "list_message_contents": "Hi I’m BACK!!<br />We should meet to up.",
+        "list_alarm": 1
+      }
+    ],
+    "visual": "../assets/image/img-box.jpg"
+  },
+  "html": "<div class=\"widget\"><p class=\"widget--title\">{{ data.title }}</p><div class=\"widget--list\"><div class=\"widget--list__box is--message\" v-for=\"item in data.message_list\"><div class=\"icon message\"><img v-bind:src=\"item.list_profile\" alt=\"message profile\"></div><div class=\"widget--list__text\"><div class=\"widget--list__top\"><p class=\"title\">{{ item.list_message_name }}</p><p class=\"time\">{{ item.list_time }}</p></div><div class=\"widget--list__bottom\"><p class=\"text\" v-html=\"item.list_message_contents\"></p><p class=\"alarm\">{{ item.list_alarm }}</p></div></div></div></div><div class=\"widget--img\"><img v-bind:src=\"data.visual\" alt=\"img\" class=\"widget--img\"></div></div>"
+}

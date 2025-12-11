@@ -1,0 +1,40 @@
+{
+  "name": "상단: 이미지 + Sub 기능",
+  "layout": "header",
+  "contents_type": "top",
+  "description": "메인 가변형 식판의 근거가 되거나 추론의 시작점이 될 수 있는 정보",
+  "parameters": {
+    "title": {
+      "description": "짧은 단어/키워드(명사/형용사/단어형)\n12자 이내 필수\n예시: 등록된 일정 / 날씨 / 장소 / etc\n예시: 사용자 쇼핑 관련 발화 → 상단: 쇼핑 일정",
+      "type": "string",
+      "max_letters": 6,
+      "example": "header title"
+    },
+    "sub_info": {
+      "description": "Title 과 관련된 추가정보\n18자 이내 필수\n예시: Title=일정 일때 Sub info=해당일정의 시간",
+      "type": "string",
+      "max_letters": 14,
+      "example": "sub info"
+    },
+    "img": {
+      "description": "Title 과 관련된 이미지 호출",
+      "type": "string",
+      "enum": [
+        "header-weather",
+        "header-cooking",
+        "header-number",
+        "header-place",
+        "header-reminder",
+        "header-schedule"
+      ],
+      "example": "header-schedule"
+    }
+  },
+  "file": "header.html",
+  "sample": {
+    "title": "header title",
+    "sub_info": "sub info",
+    "img": "header-schedule"
+  },
+  "html": "<div class=\"header\"><div class=\"header--left\"><div class=\"header--img\"><img :src=\"'../assets/image/header-img/' + data.img + '.jpg'\" alt=\"img\" class=\"img\"></div></div><div class=\"header--right\"><p class=\"header--info\">{{ data.sub_info }}</p><p class=\"header--title\">{{ data.title }}</p></div></div>"
+}

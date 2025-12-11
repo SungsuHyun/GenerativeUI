@@ -1,0 +1,93 @@
+{
+  "name": "Thumbnail Group",
+  "layout": "info_13",
+  "description": "Displays a small group of two or more images retrieved from the user's gallery. This is used to show a collection of related photos (up to 3) in a single component.",
+  "contents_type": "middle",
+  "examples": [
+    "Show me the best photos from my trip.",
+    "Show me pictures of the sky.",
+    "Find my favorite photos from last summer."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the entire image group (e.g., 'Trip Photos', 'Highlights').",
+      "type": "string",
+      "max_words": 2,
+      "example": "Trip Photos"
+    },
+    "date": {
+      "description": "A relevant date or date range for the group of images (e.g., 'August 2023', 'Jan - Sep 2025').",
+      "type": "string",
+      "example": "Jan - Sep 2025"
+    },
+    "thumbnail_list": {
+      "description": "An array containing the paths to the images to be displayed. Recommended 2-3 items.",
+      "type": "array",
+      "data": {
+        "thumbnail_img": {
+          "tool_type": "img_search",
+          "description": "The path to an individual image in the group.",
+          "type": "string",
+          "default": [
+            "../assets/image/sample-multiple01.jpg",
+            "../assets/image/sample-multiple02.jpg",
+            "../assets/image/sample-multiple03.jpg"
+          ]
+        },
+        "place": {
+          "description": "The place associated with the image. Please avoid `unknown` words. Just use the place or city name.",
+          "type": "string",
+          "max_words": 2
+        },
+        "date": {
+          "description": "The date associated with the image. The date should be different for each image. Please avoid `unknown` words. Just use the date.",
+          "type": "string",
+          "format_example": "Aug 8, 2025"
+        }
+      },
+      "default_count": 3,
+      "min": 3,
+      "max": 3,
+      "example": [
+        {
+          "thumbnail_img": "../assets/image/sample-multiple01.jpg",
+          "place": "Milan",
+          "date": "Aug 8, 2025"
+        },
+        {
+          "thumbnail_img": "../assets/image/sample-multiple02.jpg",
+          "place": "Milan",
+          "date": "Aug 9, 2025"
+        },
+        {
+          "thumbnail_img": "../assets/image/sample-multiple03.jpg",
+          "place": "Milan",
+          "date": "Aug 10, 2025"
+        }
+      ]
+    }
+  },
+  "file": "info_13_multiple_imgs.html",
+  "sample": {
+    "component_title": "Trip Photos",
+    "date": "Jan - Sep 2025",
+    "thumbnail_list": [
+      {
+        "thumbnail_img": "../assets/image/sample-multiple01.jpg",
+        "place": "Milan",
+        "date": "Aug 8, 2025"
+      },
+      {
+        "thumbnail_img": "../assets/image/sample-multiple02.jpg",
+        "place": "Milan",
+        "date": "Aug 9, 2025"
+      },
+      {
+        "thumbnail_img": "../assets/image/sample-multiple03.jpg",
+        "place": "Milan",
+        "date": "Aug 10, 2025"
+      }
+    ]
+  },
+  "html": "<div class=\"widget type2 is--multiple-img\"><p class=\"widget--title\">{{ data.date }}</p><p class=\"multiple-img__title\">{{ data.component_title }}</p><div class=\"multiple-img__box\"><div class=\"img\" v-for=\"(item, index) in data.thumbnail_list\" :key=\"index\"><p class=\"place\" v-if=\"item.place\" v-html=\"item.place\"></p><p class=\"date\" v-if=\"item.date\" v-html=\"item.date\"></p><img :src=\"item.thumbnail_img\"></div></div></div>"
+}

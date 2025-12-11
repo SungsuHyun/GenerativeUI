@@ -1,0 +1,66 @@
+{
+  "name": "Check list",
+  "layout": "info_3",
+  "description": "Displays an interactive list of items that can be checked or unchecked. This is ideal for managing tasks where items need to be marked as selected or completed, such as to-do lists, shopping lists, packing lists, or settings preferences.",
+  "contents_type": "middle",
+  "examples": [
+    "What are my to-dos for today?",
+    "What's on my shopping list?",
+    "Show me my packing list for the trip."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the entire checklist (e.g., 'Today's To-Do', 'Shopping List').",
+      "type": "string",
+      "example": "정보제공 3번"
+    },
+    "check_list": {
+      "description": "An array of items to be displayed in the checklist. Recommended 1-5 items.",
+      "type": "array",
+      "data": {
+        "list_subject": {
+          "description": "The text content for the checklist item (e.g., 'Buy milk', 'Confirm flight'). (Note: Text may be truncated with '...' if it exceeds display limits).",
+          "type": "string",
+          "max_words": 3
+        },
+        "list_check": {
+          "description": "The current status of the checkbox. `true` for checked (completed), `false` for unchecked.",
+          "type": "boolean"
+        }
+      },
+      "example": [
+        {
+          "list_subject": "Olive oil",
+          "list_check": true
+        },
+        {
+          "list_subject": "Smoked Salmon",
+          "list_check": false
+        },
+        {
+          "list_subject": "Rosemary",
+          "list_check": false
+        }
+      ]
+    }
+  },
+  "file": "info_3_check_list.html",
+  "sample": {
+    "component_title": "정보제공 3번",
+    "check_list": [
+      {
+        "list_subject": "Olive oil",
+        "list_check": true
+      },
+      {
+        "list_subject": "Smoked Salmon",
+        "list_check": false
+      },
+      {
+        "list_subject": "Rosemary",
+        "list_check": false
+      }
+    ]
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--list is--check-list\"><div class=\"widget--item\" v-for=\"(item, index) in data.check_list\"><div class=\"widget--item__side\"><label :for=\"item.list_subject\" class=\"forms--check\"><input type=\"checkbox\" :id=\"item.list_subject\" :checked=\"item.list_check\"> <span class=\"forms--check__icon\"></span></label></div><div class=\"widget--item__box\"><label :for=\"item.list_subject\" class=\"title\"><p class=\"title\">{{ item.list_subject }}</p></label></div></div></div></div>"
+}

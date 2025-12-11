@@ -1,0 +1,55 @@
+{
+  "name": "Text + graph(grouped bar)",
+  "layout": "info_5",
+  "description": "Displays a grouped bar chart to compare multiple datasets side-by-side across several categories. This is ideal for breaking down a total and comparing its components over time or against other categories (e.g., comparing expense types month by month).",
+  "contents_type": "middle",
+  "examples": [
+    "Show my spending history for this month.",
+    "Show my step count for this week.",
+    "What are my app usage times?",
+    "Compare my workout hours by week for this month."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "The title for the chart (e.g., 'Monthly Spending', 'Weekly Activity').",
+      "type": "string",
+      "example": "정보제공 5번"
+    },
+    "metric_text": {
+      "description": "A specific data point or summary metric to be displayed with the graph, including its value and unit (e.g., '5,400 steps', '3h 15m').",
+      "type": "string",
+      "format": [
+        "HH:MM:SS",
+        "HH:MM",
+        "MM:SS",
+        "SS",
+        "YY-MM-DD",
+        "MM/DD~MM/DD",
+        "MM/DD",
+        "MM",
+        "YY",
+        "MM:SS~MM:SS"
+      ],
+      "example": "This month's spending"
+    },
+    "data": {
+      "description": "The data of the graph. (e.g., '3,359,27', '11:21:15').",
+      "type": "string",
+      "max_letters": 8,
+      "example": "3,359,27"
+    },
+    "unit": {
+      "description": "The unit of the graph. (e.g., 'USD', 'steps').",
+      "type": "string",
+      "example": "USD"
+    }
+  },
+  "file": "info_5_text_graph_bar.html",
+  "sample": {
+    "component_title": "정보제공 5번",
+    "metric_text": "This month's spending",
+    "data": "3,359,27",
+    "unit": "USD"
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--graph is--bar\"><p class=\"bar-time\">{{ data.metric_text }}</p><p class=\"bar-time\"><span class=\"text\" v-html=\"data.data\"></span> <span class=\"unit\" v-html=\"data.unit\"></span></p><div class=\"widget--graph__box\"><img src=\"../assets/image/graph/chart_bar.svg\"></div></div></div>"
+}

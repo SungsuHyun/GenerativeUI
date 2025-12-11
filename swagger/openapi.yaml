@@ -1,0 +1,150 @@
+components:
+  schemas:
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          title: Detail
+          type: array
+      title: HTTPValidationError
+      type: object
+    UserRequest:
+      properties:
+        context:
+          additionalProperties: true
+          default: {}
+          title: Context
+          type: object
+        intent:
+          default: Show me a photo of a cute cat.
+          description: User's intent or query
+          title: Intent
+          type: string
+      title: UserRequest
+      type: object
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          title: Location
+          type: array
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+      type: object
+info:
+  description: 'New 3-Step MCP Host: 1) MCP Data Collection -> 2) Layout Classification
+    -> 3) Data Mapping for Dynamic UI Generation'
+  title: MCP Host API
+  version: 2.0.0
+openapi: 3.0.3
+paths:
+  /health:
+    get:
+      description: Health check endpoint
+      operationId: health_check_health_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Health Check
+  /layouts:
+    get:
+      description: List all available layout templates
+      operationId: list_available_layouts_layouts_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: List Available Layouts
+  /layouts/{layout_id}:
+    get:
+      description: Get detailed information about a specific layout
+      operationId: get_layout_details_layouts__layout_id__get
+      parameters:
+      - in: path
+        name: layout_id
+        required: true
+        schema:
+          title: Layout Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Layout Details
+  /mcp/user/reconnect:
+    post:
+      description: Manually reconnect MCP User client
+      operationId: reconnect_mcp_user_client_mcp_user_reconnect_post
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Reconnect Mcp User Client
+  /mcp/user/tools:
+    get:
+      description: List available MCP User tools
+      operationId: list_mcp_user_tools_mcp_user_tools_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: List Mcp User Tools
+  /process:
+    post:
+      description: "Process user request through new 3-step workflow with streaming\
+        \ response.\n\nNew Workflow:\n1. MCP Data Collection: intent + context ->\
+        \ user data collection\n2. Layout Classification: intent + context + data\
+        \ -> select appropriate layout\n3. Data Mapping: layout data schema + MCP\
+        \ user data -> final UI mapping\n\nArgs:\n    user_request: Contains intent\
+        \ and context.\n    \nReturns:\n    StreamingResponse with the complete workflow\
+        \ result."
+      operationId: process_request_process_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Process Request

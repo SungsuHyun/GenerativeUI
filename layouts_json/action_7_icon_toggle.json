@@ -1,0 +1,87 @@
+{
+  "name": "Icon + Toggle list",
+  "layout": "action_7",
+  "description": "Displays a list of items where each has its own state that can be individually controlled with a toggle switch. This is ideal for managing multiple settings or devices from a single screen, such as app notifications, system functions (Wi-Fi, Bluetooth), or smart home device controls.",
+  "contents_type": "middle",
+  "examples": [
+    "Turn on notifications and turn off location services.",
+    "Show me only the devices that are currently on.",
+    "Turn on the AC and turn off the TV.",
+    "List all the devices in the living room."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the entire list of controls (e.g., 'Settings', 'Device Control').",
+      "type": "string",
+      "example": "행동유도 7번"
+    },
+    "toggle_list": {
+      "description": "An array of controllable items to be displayed in the list.",
+      "type": "array",
+      "data": {
+        "icon": {
+          "description": "The path to the icon representing the setting or device (e.g., a Wi-Fi symbol, a lightbulb icon).",
+          "type": "string",
+          "enum": [
+            "bulb",
+            "aircon",
+            "tv",
+            "wifi",
+            "bluetooth",
+            "cellular"
+          ]
+        },
+        "text_subject": {
+          "description": "The name of the setting or device (e.g., 'Wi-Fi', 'Living Room Lamp').",
+          "type": "string",
+          "max_words": 2
+        },
+        "status": {
+          "description": "The current state of the item. `true` for on, `false` for off. This controls the toggle's position.",
+          "type": "boolean"
+        }
+      },
+      "min": 3,
+      "max": 4,
+      "example": [
+        {
+          "icon": "bulb",
+          "text_subject": "Lamp",
+          "status": true
+        },
+        {
+          "icon": "aircon",
+          "text_subject": "Air conditioner",
+          "status": false
+        },
+        {
+          "icon": "tv",
+          "text_subject": "OLED TV",
+          "status": false
+        }
+      ]
+    }
+  },
+  "file": "action_7_icon_toggle.html",
+  "sample": {
+    "component_title": "행동유도 7번",
+    "toggle_list": [
+      {
+        "icon": "bulb",
+        "text_subject": "Lamp",
+        "status": true
+      },
+      {
+        "icon": "aircon",
+        "text_subject": "Air conditioner",
+        "status": false
+      },
+      {
+        "icon": "tv",
+        "text_subject": "OLED TV",
+        "status": false
+      }
+    ]
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--list is--toggle-list\"><div class=\"widget--item\" v-for=\"item in data.toggle_list\"><div class=\"widget--item__box\"><div class=\"icon\"><img :src=\"`../assets/image/toggle-icon/${item.icon}.svg`\" class=\"img\"><p class=\"title\">{{ item.text_subject }}</p></div><label for=\"\" class=\"forms--toggle\"><input type=\"checkbox\" :checked=\"item.status\"> <input type=\"checkbox\"> <span class=\"forms--toggle__icon\"></span></label></div></div></div></div>"
+}

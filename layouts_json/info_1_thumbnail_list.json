@@ -1,0 +1,70 @@
+{
+  "name": "Thumbnail list",
+  "layout": "info_1",
+  "description": "Displays a list of items where each is identified by a thumbnail image and a short title. This is ideal for visually browsing content like news articles, music tracks, products, or contacts, making each item easily distinguishable.",
+  "contents_type": "middle",
+  "examples": [
+    "Show me today's top news.",
+    "What was on my playlist yesterday?",
+    "Show my recent calls.",
+    "Compare Google and Tesla stock."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the entire list (e.g., 'Top News', 'Recent Calls').",
+      "type": "string",
+      "example": "정보제공 1번"
+    },
+    "thumbnail_list": {
+      "description": "An array of items to be displayed in the list (max 3 items as defined).",
+      "type": "array",
+      "data": {
+        "thumbnail_img": {
+          "tool_type": "image_search",
+          "description": "The thumbnail image for the list item.",
+          "type": "string",
+          "default": "../assets/image/img-box.jpg"
+        },
+        "list_subject": {
+          "description": "The short title or name for the list item (max 3 words).",
+          "type": "string",
+          "max_words": 3
+        }
+      },
+      "max": 3,
+      "example": [
+        {
+          "thumbnail_img": "../assets/image/img-box.jpg",
+          "list_subject": "subject 1"
+        },
+        {
+          "thumbnail_img": "../assets/image/img-box.jpg",
+          "list_subject": "subject 1"
+        },
+        {
+          "thumbnail_img": "../assets/image/img-box.jpg",
+          "list_subject": "subject 1"
+        }
+      ]
+    }
+  },
+  "file": "info_1_thumbnail_list.html",
+  "sample": {
+    "component_title": "정보제공 1번",
+    "thumbnail_list": [
+      {
+        "thumbnail_img": "../assets/image/img-box.jpg",
+        "list_subject": "subject 1"
+      },
+      {
+        "thumbnail_img": "../assets/image/img-box.jpg",
+        "list_subject": "subject 1"
+      },
+      {
+        "thumbnail_img": "../assets/image/img-box.jpg",
+        "list_subject": "subject 1"
+      }
+    ]
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--list is--thumbnail-list\"><div class=\"widget--item\" v-for=\"item in data.thumbnail_list\"><div class=\"widget--item__side\"><p class=\"thumbnail\"><img v-bind:src=\"item.thumbnail_img\" alt=\"thumbnail img\"></p></div><div class=\"widget--item__box\"><p class=\"title\">{{ item.list_subject }}</p></div></div></div></div>"
+}

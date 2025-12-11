@@ -1,0 +1,111 @@
+{
+  "name": "Thumbnail list + Visual",
+  "layout": "8",
+  "description": "1개의 항목을 자세히 탐색하는 흐름일 때\n정보에 연결된 시각적 컨텍스트 visual 이 더 많은 의미를 제공할때\nvisual(이미지, 그래프, 지도 등)을 포함할 때",
+  "contents_type": "middle",
+  "parameters": {
+    "title": {
+      "description": "정보를 요약한 내용",
+      "type": "string",
+      "example": "8번"
+    },
+    "text_description": {
+      "description": "전체 내용을 요약하거나, 아래 리스트 내용을 뽑은 이유 ",
+      "type": "string",
+      "example": "Lorem ipsum dolor sit amet consectetur.<br/>Eget pellentesque nec consectetur tempus turpis ultrices."
+    },
+    "thumbnail_list": {
+      "description": "thumbnail과 함께 정보를 전달하는 리스트",
+      "type": "array",
+      "data": {
+        "list_thumbnail": {
+          "description": " 리스트 항목을 대표하는 이미지(image path) ",
+          "type": "string"
+        },
+        "list_tag": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "color": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "text"
+            ]
+          }
+        },
+        "list_subject": {
+          "type": "string"
+        },
+        "list_content": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      },
+      "example": [
+        {
+          "list_thumbnail": "../assets/image/img-box.jpg",
+          "list_tag": [
+            {
+              "text": "Status tag"
+            },
+            {
+              "text": "Status tag",
+              "color": "lightblue"
+            }
+          ],
+          "list_subject": "subject 2",
+          "list_content": [
+            "content 1",
+            "content 2"
+          ]
+        }
+      ]
+    },
+    "visual": {
+      "description": "정보와 관련된 시각정보",
+      "type": "string",
+      "example": "../assets/image/img-box.jpg"
+    }
+  },
+  "file": "8_thumbnail-list-visual.html",
+  "sample": {
+    "title": "8번",
+    "text_description": "Lorem ipsum dolor sit amet consectetur.<br/>Eget pellentesque nec consectetur tempus turpis ultrices.",
+    "thumbnail_list": [
+      {
+        "list_thumbnail": "../assets/image/img-box.jpg",
+        "list_tag": [
+          {
+            "text": "Status tag"
+          },
+          {
+            "text": "Status tag",
+            "color": "lightblue"
+          }
+        ],
+        "list_subject": "subject 2",
+        "list_content": [
+          "content 1",
+          "content 2"
+        ]
+      }
+    ],
+    "visual": "../assets/image/img-box.jpg"
+  },
+  "html": "<div class=\"widget\"><p class=\"widget--title\">{{ data.title }}</p><div class=\"widget--list\"><div class=\"widget--list__box is--thumb\" v-for=\"item in data.thumbnail_list\"><div class=\"icon thumb\"><img v-bind:src=\"item.list_thumbnail\" alt=\"thumbnail img\"></div><div class=\"widget--list__text\"><div class=\"widget--list__tag\"><p v-for=\"(tagItem, index) in item.list_tag\" :key=\"index\" :class=\"['tag', tagItem.color]\">{{ tagItem.text }}</p></div><p class=\"title\">{{ item.list_subject }}</p><template v-if=\"Array.isArray(item.list_content)\"><p class=\"text\" v-for=\"(content, index) in item.list_content\" :key=\"index\">{{ content }}</p></template><template v-else=\"\"><p class=\"text\">{{ item.list_content }}</p></template></div></div></div><div class=\"widget--img\"><img v-bind:src=\"data.visual\" alt=\"img\" class=\"widget--img\"></div></div>"
+}

@@ -1,0 +1,80 @@
+{
+  "name": "Text + chips",
+  "layout": "info_11",
+  "description": "A layout that displays key topics or keywords as interactive 'chips' associated with a body of text. This helps users quickly grasp the context and allows them to easily filter, select, or explore related items.",
+  "contents_type": "middle",
+  "examples": [
+    "Show me the main topics from my recent messages.",
+    "Tell me about my running performance, filtered by day of the week.",
+    "Categorize my expenses for last month."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the entire content block.",
+      "type": "string",
+      "example": "정보제공 11번"
+    },
+    "chip_list": {
+      "description": "An array of interactive chips that represent keywords, topics, or filters related to the text content.",
+      "type": "array",
+      "data": {
+        "chip": {
+          "description": "The text label for the chip.",
+          "type": "string",
+          "max_words": 1
+        },
+        "disable": {
+          "description": "Determines if the chip is interactive. `true` for disabled (not clickable), `false` for enabled.",
+          "type": "boolean"
+        }
+      },
+      "example": [
+        {
+          "chip": "Meeting",
+          "disable": false
+        },
+        {
+          "chip": "Budget",
+          "disable": true
+        },
+        {
+          "chip": "Date",
+          "disable": true
+        }
+      ]
+    },
+    "text_subheading": {
+      "description": "A subheading or short summary for the main text content.",
+      "type": "string",
+      "max_words": 2,
+      "example": "Title summary"
+    },
+    "text_description": {
+      "description": "The main body of text content that is associated with the chips.",
+      "type": "string",
+      "max_words": 20,
+      "example": "The company entered digital health with new AI tools to support faster diagnostics and better patient care."
+    }
+  },
+  "file": "info_11_text_chips.html",
+  "sample": {
+    "component_title": "정보제공 11번",
+    "chip_list": [
+      {
+        "chip": "Meeting",
+        "disable": false
+      },
+      {
+        "chip": "Budget",
+        "disable": true
+      },
+      {
+        "chip": "Date",
+        "disable": true
+      }
+    ],
+    "text_subheading": "Title summary",
+    "text_description": "The company entered digital health with new AI tools to support faster diagnostics and better patient care."
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--text is--chips\"><div class=\"widget--item\"><div class=\"widget--item__chips\"><p class=\"chip\" v-for=\"(item, index) in data.chip_list\" :key=\"index\" :class=\"{ 'disable': item.disable }\">{{ item.chip }}</p></div><div class=\"widget--item__box\"><p class=\"title\">{{ data.text_subheading }}</p><p class=\"text\">{{ data.text_description }}</p></div></div></div></div>"
+}

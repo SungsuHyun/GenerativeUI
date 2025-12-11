@@ -1,0 +1,53 @@
+{
+  "name": "CTA Btn",
+  "layout": "action_11",
+  "description": "Presents a single, clear suggestion with a prominent Call-to-Action (CTA) button. Use this when the primary goal is to encourage a specific user action (e.g., book, order, purchase, find directions), not just to display information. Not intended for media playback.",
+  "contents_type": "middle",
+  "examples": [
+    "Recommend a good place for lunch.",
+    "Order a pizza.",
+    "Find a birthday gift for my friend.",
+    "Book a table for two tonight."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the card (e.g., 'Lunch Suggestion', 'Gift Idea').",
+      "type": "string",
+      "example": "행동유도 11번"
+    },
+    "card_img": {
+      "tool_type": "image_search",
+      "description": "The image for the card.",
+      "type": "string",
+      "default": "../assets/image/sample-btn-cta.jpg",
+      "example": "../assets/image/sample-btn-cta.jpg"
+    },
+    "text_sub_heading": {
+      "description": "Secondary text, providing context or details (e.g., 'Italian Cuisine', 'Free Delivery').",
+      "type": "string",
+      "max_words": 2,
+      "example": "Urban Steak"
+    },
+    "text_heading": {
+      "description": "The main text or title of the suggestion (e.g., 'Margherita Pizza', 'Flower Bouquet').",
+      "type": "string",
+      "max_words": 3,
+      "example": "New York Strip"
+    },
+    "text_cta": {
+      "description": "The text for the Call-to-Action button (e.g., 'Order Now', 'View Options', 'Book a Table').",
+      "type": "string",
+      "max_words": 3,
+      "example": "Order Now"
+    }
+  },
+  "file": "action_11_btn_cta.html",
+  "sample": {
+    "component_title": "행동유도 11번",
+    "card_img": "../assets/image/sample-btn-cta.jpg",
+    "text_sub_heading": "Urban Steak",
+    "text_heading": "New York Strip",
+    "text_cta": "Order Now"
+  },
+  "html": "<div class=\"widget type2 is--btn-cta\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"btn-cta__item\"><p class=\"img\"><img :src=\"data.card_img\"></p><div class=\"textbox\"><p class=\"sub\">{{ data.text_sub_heading }}</p><p class=\"text\">{{ data.text_heading }}</p></div></div><button type=\"button\" class=\"btn-cta__call\">{{ data.text_cta }}</button></div>"
+}

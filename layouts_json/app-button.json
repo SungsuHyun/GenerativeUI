@@ -1,0 +1,39 @@
+{
+  "name": "상단: 단일 아이콘",
+  "layout": "app-button",
+  "description": "상단 이미지 + sub 기능의 추가 기능 / 사용자 발화에 맞는 단일 아이콘을 생성하여 추가 인터랙션 여지를 줌. 선택 가능한 버튼형\n필수 생성 영역 (e.g. 장소 관련 발화 → location icon(지도 바로가기 버튼))\n단일 아이콘은 아래 에셋에서 호출 (부족할 시 One UI asset 사용)",
+  "contents_type": "button",
+  "parameters": {
+    "icon": {
+      "description": "사용자 발화에 맞는 단일 아이콘",
+      "type": "string",
+      "enum": [
+        "app-calculator",
+        "app-calendar",
+        "app-camera",
+        "app-card",
+        "app-contact",
+        "app-file",
+        "app-health",
+        "app-map",
+        "app-medical",
+        "app-message",
+        "app-music",
+        "app-note",
+        "app-photo",
+        "app-play",
+        "app-reminders",
+        "app-setting",
+        "app-smart",
+        "app-snooze",
+        "app-weather"
+      ],
+      "example": "app-pay"
+    }
+  },
+  "file": "app-button.html",
+  "sample": {
+    "icon": "app-pay"
+  },
+  "html": "<button type=\"button\" class=\"app--button\"><img :src=\"'../assets/image/app-button/' + data.icon + '.svg'\" alt=\"img\" class=\"img\"></button>"
+}

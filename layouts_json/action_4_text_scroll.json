@@ -1,0 +1,100 @@
+{
+  "name": "Img + text scroll (Live Transcript)",
+  "layout": "action_4",
+  "description": "Displays audio playback information (e.g., for a podcast, audiobook, or lecture) alongside a real-time, scrolling text transcript. This is used to synchronize spoken words with written text.",
+  "contents_type": "middle",
+  "examples": [
+    "I want to listen to the podcast with a transcript.",
+    "Can I see the text for that part of the lecture you just mentioned?",
+    "Show me the live subtitles for this audiobook."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A header or category for the content (e.g., 'Now Playing', 'Lecture Transcript').",
+      "type": "string",
+      "max_words": 3,
+      "example": "Episode 12"
+    },
+    "text_heading": {
+      "description": "The main title of the audio content (e.g., 'Episode 101: The Future of AI').",
+      "type": "string",
+      "example": "simple podcast"
+    },
+    "background_img": {
+      "tool_type": "img_search",
+      "description": "The path to the cover art for the audio content (podcast, audiobook, etc.).",
+      "type": "string",
+      "default": "../assets/image/sample-text-scroll.jpg",
+      "example": "../assets/image/sample-text-scroll.jpg"
+    },
+    "text_list": {
+      "description": "An array of transcript entries, where each object represents a line of spoken text.",
+      "type": "array",
+      "data": {
+        "content_time": {
+          "description": "The timestamp (MM:SS) in the audio when this line of text is spoken.",
+          "type": "timestamp(MM:SS)"
+        },
+        "content_name": {
+          "description": "The name of the person speaking this line. Intended to be displayed in bold.",
+          "type": "string"
+        },
+        "text_description": {
+          "description": "The actual transcribed text spoken at the corresponding timestamp.",
+          "type": "string"
+        }
+      },
+      "example": [
+        {
+          "content_time": "00:00",
+          "content_name": "Host",
+          "text_description": "we'll show you a very simple UI design."
+        },
+        {
+          "content_time": "00:01",
+          "content_name": "Guest",
+          "text_description": "we'll show you a very simple UI design."
+        },
+        {
+          "content_time": "00:02",
+          "content_name": "Guest",
+          "text_description": "we'll show you a very simple UI design."
+        },
+        {
+          "content_time": "00:03",
+          "content_name": "Guest",
+          "text_description": "we'll show you a very simple UI design."
+        }
+      ]
+    }
+  },
+  "file": "action_4_text_scroll.html",
+  "sample": {
+    "component_title": "Episode 12",
+    "text_heading": "simple podcast",
+    "background_img": "../assets/image/sample-text-scroll.jpg",
+    "text_list": [
+      {
+        "content_time": "00:00",
+        "content_name": "Host",
+        "text_description": "we'll show you a very simple UI design."
+      },
+      {
+        "content_time": "00:01",
+        "content_name": "Guest",
+        "text_description": "we'll show you a very simple UI design."
+      },
+      {
+        "content_time": "00:02",
+        "content_name": "Guest",
+        "text_description": "we'll show you a very simple UI design."
+      },
+      {
+        "content_time": "00:03",
+        "content_name": "Guest",
+        "text_description": "we'll show you a very simple UI design."
+      }
+    ]
+  },
+  "html": "<div class=\"widget type2 is--text-script\"><div class=\"widget--script__top\"><p class=\"title\">{{ data.component_title }}</p><p class=\"heading\">{{ data.text_heading }}</p></div><div class=\"widget--script__bottom\"><p class=\"script__bottom--bar\"><span style=\"width:16%\"></span></p><div class=\"script__bottom--scroll\" @scroll=\"scrollTextScript\"><div class=\"script__bottom--item\" v-for=\"(item, index) in data.text_list\" :key=\"index\" :class=\"{ now : index == 0 }\"><p class=\"item__left\">{{ item.content_time }}</p><div class=\"item__right\"><p class=\"name\">{{ item.content_name }}</p><p class=\"description\">{{ item.text_description }}</p></div></div></div></div><p class=\"bg\"><img :src=\"data.background_img\"></p></div>"
+}

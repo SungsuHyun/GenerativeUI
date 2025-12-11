@@ -1,0 +1,37 @@
+{
+  "name": "Text/General Layout",
+  "layout": "info_10",
+  "description": "A general-purpose layout for displaying text-only information. Use this for summarizing simple documents, notes, or content without images. **This layout should be used as a default fallback when no other specialized layout is suitable.**",
+  "contents_type": "middle",
+  "examples": [
+    "Summarize today's meeting for me.",
+    "Open the last memo I saved.",
+    "Show me the article I was reading this morning."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the overall content block (e.g., 'Meeting Summary', 'Saved Note').",
+      "type": "string",
+      "example": "정보제공 10번"
+    },
+    "text_heading": {
+      "description": "The main headline or title of the text content.",
+      "type": "string",
+      "max_words": 2,
+      "example": "Meeting agenda"
+    },
+    "text_description": {
+      "description": "The main body of the text, used for displaying the full summary, note, or article content.",
+      "type": "string",
+      "max_words": 20,
+      "example": "The company entered digital health with new AI tools to support faster diagnostics and better patient care."
+    }
+  },
+  "file": "info_10_text_general_layout.html",
+  "sample": {
+    "component_title": "정보제공 10번",
+    "text_heading": "Meeting agenda",
+    "text_description": "The company entered digital health with new AI tools to support faster diagnostics and better patient care."
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--text\"><div class=\"widget--item\"><p class=\"title\">{{ data.text_heading }}</p><p class=\"text\">{{ data.text_description }}</p></div></div></div>"
+}

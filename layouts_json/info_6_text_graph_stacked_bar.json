@@ -1,0 +1,59 @@
+{
+  "name": "Progress Bar / Goal Tracker",
+  "layout": "info_6",
+  "description": "Displays progress towards a specific target using a visual indicator like a progress bar or gauge. This is ideal for tracking goal achievement, such as daily step counts, budget spending, or project completion.",
+  "contents_type": "middle",
+  "examples": [
+    "Show my goal achievement rate for today's steps.",
+    "What's my workout progress for this week?",
+    "Show my spending status against this month's budget."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "The title for the progress chart (e.g., 'Today's Steps', 'Monthly Budget').",
+      "type": "string",
+      "example": "정보제공 6번"
+    },
+    "metric_text": {
+      "description": "The primary metric to be displayed, showing the current progress with its unit (e.g., '7,500 steps').",
+      "type": "string",
+      "max_words": 2,
+      "example": "test"
+    },
+    "axis_min_label": {
+      "description": "The minimum value for the progress bar's range, typically `0`.",
+      "type": "int",
+      "example": 0
+    },
+    "target_label": {
+      "description": "A label for the target value that the progress is measured against (e.g., '10,000', '100%').",
+      "type": "string",
+      "example": "Target"
+    },
+    "graph_type": {
+      "description": "The visual style of the progress indicator.",
+      "type": "string",
+      "enum": [
+        "percent",
+        "range",
+        "bar"
+      ],
+      "example": "range"
+    },
+    "graph_value": {
+      "description": "The current numeric value of the progress, which determines the fill level of the indicator.",
+      "type": "integer",
+      "example": 65
+    }
+  },
+  "file": "info_6_text_graph_stacked_bar.html",
+  "sample": {
+    "component_title": "정보제공 6번",
+    "metric_text": "test",
+    "axis_min_label": 0,
+    "target_label": "Target",
+    "graph_type": "range",
+    "graph_value": 65
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--graph is--stack\" :class=\"{'is--stack-percent': data.graph_type === 'percent', 'is--stack-range': data.graph_type === 'range', 'is--stack-bar': data.graph_type === 'bar'}\"><p class=\"bar-main\"><span class=\"num\">{{ data.graph_value }}</span> <span class=\"text\" v-if=\"data.graph_type == 'range' || data.graph_type == 'bar' \">bpm</span></p><div class=\"widget--graph__box\"><img v-if=\"data.graph_type == 'percent'\" src=\"../assets/image/graph/stack-percent.svg\"><template v-if=\"data.graph_type == 'range'\"><img v-if=\"data.graph_value >= 80 &amp;&amp; data.graph_value < 95\" src=\"../assets/image/graph/stack-range-blue.svg\"> <img v-else-if=\"data.graph_value >= 80 &amp;&amp; data.graph_value < 110\" src=\"../assets/image/graph/stack-range-orange.svg\"> <img v-else=\"\" src=\"../assets/image/graph/stack-percent-tooltip.svg\"></template><img v-if=\"data.graph_type == 'bar'\" src=\"../assets/image/graph/stack-bar.svg\"><p class=\"widget--graph__label\" v-if=\"data.axis_min_label || data.target_label\"><span>{{ data.axis_min_label }}</span> <span>{{ data.target_label }}</span></p></div></div></div>"
+}

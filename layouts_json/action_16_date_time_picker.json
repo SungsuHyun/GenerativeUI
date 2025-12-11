@@ -1,0 +1,25 @@
+{
+  "name": "Time Picker",
+  "layout": "action_16",
+  "description": "Used to specify a time when a user's request is time-dependent but ambiguous. This should be invoked for vague requests like 'this evening,' 'on the weekend,' or 'tomorrow morning,' not when a precise time is given. Ideal for clarifying time for alarms, reservations, or appointments.",
+  "contents_type": "middle",
+  "examples": [
+    "Book a restaurant for next week.",
+    "Set tomorrow's alarm for a bit later.",
+    "Schedule a meeting for sometime later.",
+    "Remind me to buy milk this evening."
+  ],
+  "parameters": {
+    "time": {
+      "description": "The initial time to display in the picker, formatted as 'HH:MM AM/PM'. This could be a default suggestion based on the user's query (e.g., 'evening' might default to '07:00 PM').",
+      "type": "string",
+      "pattern": "^(0?[1-9]|1[0-2]):[0-5][0-9]\\s(AM|PM)$",
+      "example": "9:40 AM"
+    }
+  },
+  "file": "action_16_date_time_picker.html",
+  "sample": {
+    "time": "9:40 AM"
+  },
+  "html": "<div class=\"widget type2 is--picker\"><p class=\"widget--picker__title\">Set Time</p><div class=\"widget--picker__control\"><div class=\"control-box\"><p class=\"hour\">{{ data.time.split(':')[0] }}</p><p class=\"colon\">:</p><div class=\"minute\" tabindex=\"0\" @scroll=\"scrollPicker\" @wheel.prevent=\"wheelPicker\" @keydown.prevent=\"keyPicker\"><p class=\"number\" :class=\"{ on: data.time.split(':')[1].split(' ')[0] == n - 1 }\" v-for=\"n in 60\" :key=\"n\">{{ String(n - 1).padStart(2, '0') }}</p></div></div><p class=\"meridiem\">{{ data.time.split(' ')[1] }}</p></div><div class=\"widget--picker__buttons\"><button type=\"button\" class=\"button done\">Done</button></div></div>"
+}

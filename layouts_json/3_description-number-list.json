@@ -1,0 +1,73 @@
+{
+  "name": "Description + Number list",
+  "layout": "3",
+  "description": "동일한 유형의 정보를 여러개 나열할 때 (리스트 사용 시). 리스트 정보에 우선순위, 순서, 단계가 핵심일 때",
+  "contents_type": "middle",
+  "parameters": {
+    "title": {
+      "description": "정보를 요약한 내용",
+      "type": "string",
+      "example": "3번"
+    },
+    "text_description": {
+      "description": "전체 내용을 요약하거나, 아래 리스트 내용을 뽑은 이유 ",
+      "type": "string",
+      "example": "Lorem ipsum dolor sit amet consectetur. Eget pellentesque nec consectetur tempus turpis ultrices."
+    },
+    "number_list": {
+      "description": "list에 추가될 항목",
+      "type": "array",
+      "data": {
+        "number": {
+          "type": "int"
+        },
+        "list_subject": {
+          "type": "string"
+        },
+        "list_content": {
+          "type": "string"
+        }
+      },
+      "example": [
+        {
+          "number": 1,
+          "list_subject": "subject 1",
+          "list_content": "content 1"
+        },
+        {
+          "number": 2,
+          "list_subject": "subject 2",
+          "list_content": "content 2"
+        },
+        {
+          "number": 3,
+          "list_subject": "subject 3",
+          "list_content": "content 3"
+        }
+      ]
+    }
+  },
+  "file": "3_description-number-list.html",
+  "sample": {
+    "title": "3번",
+    "text_description": "Lorem ipsum dolor sit amet consectetur. Eget pellentesque nec consectetur tempus turpis ultrices.",
+    "number_list": [
+      {
+        "number": 1,
+        "list_subject": "subject 1",
+        "list_content": "content 1"
+      },
+      {
+        "number": 2,
+        "list_subject": "subject 2",
+        "list_content": "content 2"
+      },
+      {
+        "number": 3,
+        "list_subject": "subject 3",
+        "list_content": "content 3"
+      }
+    ]
+  },
+  "html": "<div class=\"widget\"><p class=\"widget--title\">{{ data.title }}</p><p class=\"widget--desc\">{{ data.text_description }}</p><div class=\"widget--list\"><div class=\"widget--list__box is--number\" v-for=\"item in data.number_list\"><p class=\"number\">{{ item.number }}</p><div class=\"widget--list__text\"><p class=\"title\">{{ item.list_subject }}</p><p class=\"text\">{{ item.list_content }}</p></div></div></div></div>"
+}

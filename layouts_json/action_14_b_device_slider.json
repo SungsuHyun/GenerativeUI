@@ -1,0 +1,71 @@
+{
+  "name": "Device control_slider",
+  "layout": "action_14_a",
+  "description": "Provides fine-grained control over a single device's attribute using a slider. This is ideal for adjusting continuous values like brightness, color temperature, or volume.",
+  "contents_type": "middle",
+  "examples": [
+    "Set the brightness to 50%.",
+    "Make the light temperature cooler.",
+    "I want to adjust the speaker's treble.",
+    "Change the office light to a warm white."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "The name of the attribute being controlled by the slider (e.g., 'Brightness', 'Color Temperature').",
+      "type": "string",
+      "example": "Color Temperature"
+    },
+    "current_value": {
+      "description": "The current numerical value of the attribute, typically within a 0-100 range.",
+      "type": "int",
+      "example": 80
+    },
+    "slider": {
+      "description": "A container for the slider's visual components.",
+      "type": "array",
+      "data": {
+        "text_label": {
+          "description": "An array of two strings for the labels at the minimum and maximum ends of the slider track (e.g., `['Cool', 'Warm']` or `['Min', 'Max']`).",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "slider_handle": {
+          "description": "Indicates the presence or state of the draggable handle on the slider.",
+          "type": "boolean"
+        },
+        "slider_track": {
+          "description": "Defines the visual style of the slider's track.",
+          "type": "string",
+          "enum": [
+            "gray",
+            "color"
+          ]
+        }
+      },
+      "example": {
+        "text_label": [
+          "0%",
+          "100%"
+        ],
+        "slider_handle": true,
+        "slider_track": "color"
+      }
+    }
+  },
+  "file": "action_14_b_device_slider.html",
+  "sample": {
+    "component_title": "Color Temperature",
+    "current_value": 80,
+    "slider": {
+      "text_label": [
+        "0%",
+        "100%"
+      ],
+      "slider_handle": true,
+      "slider_track": "color"
+    }
+  },
+  "html": "<div class=\"widget type2 is--control slider\"><div class=\"widget--control__box\"><p class=\"widget--title\">{{ data.component_title }}</p><p class=\"brightness\"><strong id=\"deviceControlSliderData\">{{ data.current_value }}</strong> <span>%</span></p></div><div class=\"widget--control__slider\" :class=\"data.slider.slider_track\"><input type=\"range\" id=\"deviceControlSlider\" v-model=\"data.current_value\" oninput=\"deviceControlSlider(this.value)\" min=\"0\" max=\"100\" :disabled=\"!data.slider.slider_handle\"><div class=\"inner\"><p class=\"label\">{{ data.slider.text_label[0] }}</p><p class=\"handle\" id=\"deviceControlSliderBar\" :style=\"{ left: data.current_value + '%' }\"><span></span></p><p class=\"label\">{{ data.slider.text_label[1] }}</p></div></div></div>"
+}

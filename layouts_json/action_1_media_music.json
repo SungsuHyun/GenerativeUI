@@ -1,0 +1,54 @@
+{
+  "name": "Media view (music)",
+  "layout": "action_1",
+  "description": "A layout for displaying a video or music item with a play/pause button.",
+  "examples": [
+    "Podcast, music, song, YouTube",
+    "Suggest music for tomorrow",
+    "Recommend something to watch on YouTube",
+    "Suggest a podcast for my commute",
+    "Show me popular videos of Google Pixel reviews"
+  ],
+  "contents_type": "middle",
+  "parameters": {
+    "type": {
+      "description": "The type of media",
+      "type": "string",
+      "enum": [
+        "music"
+      ],
+      "example": "music"
+    },
+    "title": {
+      "description": "Title",
+      "type": "string",
+      "example": "Stranger"
+    },
+    "music_background_img": {
+      "tool_type": "img_search",
+      "description": "The background image of the music",
+      "type": "string",
+      "default": "../assets/image/sample-media-music.jpg",
+      "example": "../assets/image/sample-media-music.jpg"
+    },
+    "text_total_time": {
+      "description": "Total playback time",
+      "type": "int",
+      "example": "2:30"
+    },
+    "text_owner": {
+      "description": "Media owner or artist",
+      "type": "string",
+      "example": "Ina Wroldsen"
+    }
+  },
+  "file": "action_1_media_music.html",
+  "sample": {
+    "type": "music",
+    "title": "Stranger",
+    "music_background_img": "../assets/image/sample-media-music.jpg",
+    "text_owner": "Ina Wroldsen",
+    "text_total_time": "2:30"
+  },
+  "html": "<div class=\"widget type2 is--media music\"><div class=\"widget--media__top\"><div class=\"media__top--left\"><p class=\"title\">{{ data.title }}</p><p class=\"owner\" v-if=\"data.text_owner\">{{ data.text_owner }}</p></div><button type=\"button\" class=\"media__top--right play\"></button></div><div class=\"widget--media__bottom\"><p class=\"text\">0:05</p><div class=\"bar\"><p style=\"width:10%\"></p></div><p class=\"text\">{{ data.text_total_time }}</p></div><p class=\"widget--media__bg\" :style=\"{ backgroundImage: 'url(' + data.music_background_img + ')' }\"></p></div>"
+}

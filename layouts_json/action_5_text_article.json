@@ -1,0 +1,40 @@
+{
+  "name": "Text + Img (Article-focused)",
+  "layout": "action_5",
+  "description": "A layout that combines an image and text to display a summary of content like a news article, blog post, or promotion. It is used to curate and introduce content, services, or events, encouraging users to view the full details.",
+  "contents_type": "middle",
+  "examples": [
+    "Show me this morning's top news.",
+    "Recommend some recent articles.",
+    "Tell me about the subscription benefits.",
+    "What's the latest event?"
+  ],
+  "parameters": {
+    "text_heading": {
+      "description": "The headline or title of the article. (Note: Display is typically limited to a maximum of 2 lines).",
+      "type": "string",
+      "max_words": 3,
+      "example": "The Invisible Highways"
+    },
+    "text_description": {
+      "description": "A summary, excerpt, or brief description of the article's content.",
+      "type": "string",
+      "max_words": 20,
+      "example": "The company entered digital health with new AI tools to support faster diagnostics and better patient care."
+    },
+    "background_img": {
+      "tool_type": "img_search",
+      "description": "The path to the main thumbnail or representative image for the article.",
+      "type": "string",
+      "default": "../assets/image/article-bg.jpg",
+      "example": "../assets/image/article-bg.jpg"
+    }
+  },
+  "file": "action_5_text_article.html",
+  "sample": {
+    "text_heading": "The Invisible Highways",
+    "text_description": "The company entered digital health with new AI tools to support faster diagnostics and better patient care.",
+    "background_img": "../assets/image/article-bg.jpg"
+  },
+  "html": "<div class=\"widget type2 is--article\"><div class=\"widget--article__top\"><p class=\"title\">{{ data.text_heading }}</p><p class=\"text\">{{ data.text_description }}</p></div><div class=\"widget--article__bottom\"><button type=\"button\" class=\"widget--article__arrow\"></button></div><p class=\"widget--article__bg\"><img :src=\"data.background_img\" alt=\"ARTICLE BG\" class=\"img\"></p></div>"
+}

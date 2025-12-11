@@ -1,0 +1,28 @@
+<svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_631_23588)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M127.132 16C113.925 2.7 94.129 0 72 0C49.87 0 30.074 2.7 16.867 16C6.341 26.6 0 43.934 0 72C0 100.066 6.342 117.4 16.869 128.001C30.076 141.299 49.871 144 72 144C94.127 144 113.923 141.299 127.13 128.001C137.658 117.4 144 100.066 144 72C144 43.934 137.659 26.601 127.132 16Z" fill="url(#paint0_linear_631_23588)"/>
+<g filter="url(#filter0_d_631_23588)">
+<circle cx="72" cy="72" r="53" fill="white"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37.8905 58.079C35.499 56.6983 34.6796 53.6403 36.0604 51.2489C37.4411 48.8574 40.499 48.038 42.8905 49.4188L74.0674 67.4188C76.4589 68.7995 77.2782 71.8574 75.8975 74.2489C74.5168 76.6403 71.4589 77.4597 69.0674 76.079L37.8905 58.079ZM69.4023 70.4989C68.5739 71.9338 69.0655 73.7685 70.5004 74.597C71.9353 75.4254 73.7701 74.9338 74.5985 73.4989C75.4269 72.064 74.9353 70.2292 73.5004 69.4008C72.0655 68.5724 70.2308 69.064 69.4023 70.4989Z" fill="#A44EFF"/>
+<path d="M115.133 28.8659C117.086 30.8185 117.086 33.9844 115.133 35.937L80.8278 70.2427C81.3916 73.0899 80.5704 76.1569 78.3639 78.3634C74.8492 81.8781 69.1507 81.8781 65.636 78.3634C62.1213 74.8487 62.1213 69.1502 65.636 65.6355C67.8425 63.429 70.9095 62.6078 73.7567 63.1716L108.062 28.8659C110.015 26.9133 113.181 26.9135 115.133 28.8659ZM74.1213 69.8781C72.9497 68.7065 71.0502 68.7065 69.8787 69.8781C68.7071 71.0497 68.7071 72.9492 69.8787 74.1207C71.0502 75.2923 72.9497 75.2923 74.1213 74.1207C75.2929 72.9492 75.2929 71.0497 74.1213 69.8781Z" fill="black"/>
+</g>
+<defs>
+<filter id="filter0_d_631_23588" x="14" y="16" width="116" height="116" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="2.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.229563 0 0 0 0 0.229563 0 0 0 0 0.229563 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_631_23588"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_631_23588" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_631_23588" x1="0" y1="0" x2="0" y2="144" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBDFE2"/>
+<stop offset="1" stop-color="#BDBEC3"/>
+</linearGradient>
+<clipPath id="clip0_631_23588">
+<rect width="144" height="144" fill="white"/>
+</clipPath>
+</defs>
+</svg>

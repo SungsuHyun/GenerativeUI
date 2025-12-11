@@ -1,0 +1,35 @@
+{
+  "name": "Device Control (Stepper)",
+  "layout": "action_15",
+  "description": "A layout for controlling a device's attribute in discrete steps. It displays the current state as a number and uses '+' and '-' buttons for adjustment. This is ideal for settings like speaker volume, light brightness, or air conditioner temperature.",
+  "contents_type": "middle",
+  "examples": [
+    "Turn down the speaker volume.",
+    "Make the light brighter.",
+    "Set the air conditioner to 23 degrees."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "The name of the device being controlled (e.g., 'Living Room Speaker', 'Air Conditioner').",
+      "type": "string",
+      "example": "Speaker"
+    },
+    "text_heading": {
+      "description": "The name of the attribute being adjusted (e.g., 'Volume', 'Temperature').",
+      "type": "string",
+      "example": "Volume"
+    },
+    "current_value": {
+      "description": "The current numerical value or step of the attribute, displayed to the user.",
+      "type": "int",
+      "example": 12
+    }
+  },
+  "file": "action_15_device_stepper.html",
+  "sample": {
+    "component_title": "Speaker",
+    "text_heading": "Volume",
+    "current_value": 12
+  },
+  "html": "<div class=\"widget type2 is--control stepper\"><div class=\"stepper__top\"><p class=\"widget--title\">{{ data.component_title }}</p><p class=\"heading\">{{ data.text_heading }}</p></div><div class=\"stepper__control\"><button type=\"button\" class=\"stepper__control--decrease\"></button> <input type=\"number\" v-model=\"data.current_value\" min=\"0\" max=\"100\" readonly=\"\"> <button type=\"button\" class=\"stepper__control--increase\"></button></div></div>"
+}

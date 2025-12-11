@@ -1,0 +1,51 @@
+{
+  "name": "Device control_on/off",
+  "layout": "action_13",
+  "description": "Provides an on/off toggle control for a single smart device. Use this to display the power status of a device (e.g., light, air conditioner, smart plug) and allow the user to turn it on or off. It can also show secondary states like brightness.",
+  "contents_type": "middle",
+  "examples": [
+    "Turn on the living room light.",
+    "Is the air conditioner on?",
+    "Switch off the bedroom lamp.",
+    "Check the status of my smart plug."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A title for the context, usually the location of the device (e.g., 'Living Room', 'Bedroom').",
+      "type": "string",
+      "example": "행동유도 13번"
+    },
+    "text_heading": {
+      "description": "The specific name of the device being controlled (e.g., 'Main Light', 'Air Conditioner').",
+      "type": "string",
+      "example": "Ambient <br>Lamp"
+    },
+    "text_description": {
+      "description": "The brightness level of the device, if applicable (e.g., for a light). Typically an integer from 0-100.",
+      "type": "int",
+      "default": 50,
+      "example": "Brightness <br>Level 50%"
+    },
+    "power": {
+      "description": "The current power state of the device. `true` for on, `false` for off.",
+      "type": "boolean",
+      "example": true
+    },
+    "device_img": {
+      "tool_type": "image_search",
+      "description": "The image of the device.",
+      "type": "string",
+      "default": "../assets/image/device-power.jpg",
+      "example": "../assets/image/device-power.jpg"
+    }
+  },
+  "file": "action_13_device_power.html",
+  "sample": {
+    "component_title": "행동유도 13번",
+    "text_heading": "Ambient <br>Lamp",
+    "text_description": "Brightness <br>Level 50%",
+    "power": true,
+    "device_img": "../assets/image/device-power.jpg"
+  },
+  "html": "<div class=\"widget type2 is--control power\"><div class=\"widget--control__box\"><p class=\"title\">{{ data.component_title}}</p><p class=\"name\" v-html=\"data.text_heading\"></p></div><div class=\"widget--control__info\"><p class=\"brightness\" v-html=\"data.text_description\"></p><button type=\"button\" class=\"power\"><span></span></button></div><p class=\"widget--control__bg\"><img :src=\"data.device_img\"></p></div>"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Input Field",
+  "layout": "action_17",
+  "description": "Provides a layout for users to input text to perform a search or execute a command. This is suitable for general information searches, in-app searches, or other text-based actions.",
+  "contents_type": "middle",
+  "examples": [
+    "I want to search for furniture.",
+    "I'd like to search within my messages.",
+    "Find a new contact to add."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the entire input component.",
+      "type": "string",
+      "example": "행동유도 17번"
+    },
+    "text_heading": {
+      "description": "A label or prompt that describes the action to be taken (e.g., 'Search for:', 'Enter command:').",
+      "type": "string",
+      "example": "Search about"
+    },
+    "profile_icon": {
+      "description": "The path to an icon representing the context of the action, such as a user's profile or the app to be searched within (max 3 icons).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "enum": [
+        "../assets/image/profile-image/profile-icon-01.png",
+        "../assets/image/profile-image/profile-icon-call.svg"
+      ],
+      "max": 3,
+      "example": [
+        "../assets/image/profile-image/profile-icon-01.png",
+        "../assets/image/profile-image/profile-icon-call.svg"
+      ]
+    },
+    "input_field": {
+      "description": "The main text input area for the user's query or command.",
+      "placeholder": "Placeholder text within the input field that suggests what can be entered (e.g., 'Search messages').",
+      "type": "string",
+      "example": {
+        "placeholder": "Shopping Furniture"
+      }
+    },
+    "action_button_text": {
+      "description": "The text label for the submit button (e.g., 'Search', 'Send').",
+      "type": "string",
+      "example": "Search"
+    }
+  },
+  "file": "action_17_input.html",
+  "sample": {
+    "component_title": "행동유도 17번",
+    "text_heading": "Search about",
+    "profile_icon": [
+      "../assets/image/profile-image/profile-icon-01.png",
+      "../assets/image/profile-image/profile-icon-call.svg"
+    ],
+    "input_field": {
+      "placeholder": "Shopping Furniture"
+    },
+    "action_button_text": "Search"
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--input\"><div class=\"widget--item\"><div class=\"widget--item__top\"><p class=\"title\">{{ data.text_heading }}</p><div class=\"profile\"><p class=\"img\" v-for=\"(imgSrc, index) in data.profile_icon\" :key=\"index\"><img :src=\"imgSrc\" alt=\"\"></p></div></div><div class=\"widget--item__bottom\"><input type=\"text\" class=\"input\" :placeholder=\"data.input_field.placeholder\"> <button type=\"button\" class=\"button\">{{ data.action_button_text }}</button></div></div></div></div>"
+}

@@ -1,0 +1,136 @@
+{
+  "mappings": {
+    "sequentialthinking": {
+      "icon": "samsung/ic_sq_intelligence_services.svg",
+      "comment": "I'm <b>analyzing</b> your intent and context"
+    },
+    "samsung_calendar": {
+      "icon": "samsung/ic_sq_calendar.svg",
+      "comment": "I'm <b>checking</b> your calendar events in <b>Samsung</b> <b>Calendar</b>"
+    },
+    "samsung_contacts": {
+      "icon": "samsung/ic_sq_contacts.svg",
+      "comment": "I'm <b>searching</b> your contacts in <b>Samsung</b> <b>Contacts</b>"
+    },
+    "samsung_gallery": {
+      "icon": "samsung/ic_sq_gallery.svg",
+      "comment": "I'm <b>finding</b> photos in <b>Samsung</b> <b>Gallery</b>"
+    },
+    "samsung_health": {
+      "icon": "samsung/ic_sq_samsung_health.svg",
+      "comment": "I'm <b>retrieving</b> your health data from <b>Samsung</b> <b>Health</b>"
+    },
+    "samsung_messages": {
+      "icon": "samsung/ic_sq_message.svg",
+      "comment": "I'm <b>checking</b> your messages in <b>Samsung</b> <b>Messages</b>"
+    },
+    "samsung_notes": {
+      "icon": "samsung/ic_sq_samsung_note.svg",
+      "comment": "I'm <b>searching</b> your notes in <b>Samsung</b> <b>Notes</b>"
+    },
+    "samsung_reminders": {
+      "icon": "samsung/ic_sq_reminder.svg",
+      "comment": "I'm <b>checking</b> your reminders in <b>Samsung</b> <b>Reminders</b>"
+    },
+    "samsung_music": {
+      "icon": "samsung/ic_sq_samsung_music.svg",
+      "comment": "I'm <b>searching</b> your music library in <b>Samsung</b> <b>Music</b>"
+    },
+    "samsung_my_files": {
+      "icon": "samsung/ic_sq_my_files.svg",
+      "comment": "I'm <b>searching</b> your files in <b>Samsung</b> <b>My Files</b>"
+    },
+    "samsung_smartthings": {
+      "icon": "samsung/ic_sq_smart_things.svg",
+      "comment": "I'm <b>checking</b> your smart devices in <b>Samsung</b> <b>SmartThings</b>"
+    },
+    "samsung_settings": {
+      "icon": "samsung/ic_sq_intelligence_services.svg",
+      "comment": "I'm <b>accessing</b> your system settings in <b>Samsung</b> <b>Settings</b>"
+    },
+    "samsung_pay": {
+      "icon": "samsung/ic_sq_samsung_wallet.svg",
+      "comment": "I'm <b>checking</b> your payment information in <b>Samsung</b> <b>Pay</b>"
+    },
+    "samsung_internet": {
+      "icon": "samsung/ic_sq_internet.svg",
+      "comment": "I'm <b>checking</b> your web page browsing information in <b>Samsung</b> <b>Internet</b>"
+    },
+    "samsung_clock": {
+      "icon": "samsung/ic_sq_clock.svg",
+      "comment": "I'm <b>checking</b> time information in <b>Samsung</b> <b>Clock</b>"
+    },
+    "amazon": {
+      "icon": "third_party/Amazon.svg",
+      "comment": "I'm <b>looking</b> for related information about <b>Amazon</b>"
+    },
+    "facebook": {
+      "icon": "third_party/Facebook.svg",
+      "comment": "I'm <b>retrieving</b> your Facebook data from <b>Facebook</b>"
+    },
+    "facebook_messenger": {
+      "icon": "third_party/Facebook_Messenger.svg",
+      "comment": "I'm <b>checking</b> your Facebook messages in <b>Facebook</b> <b>Messenger</b>"
+    },
+    "gmail": {
+      "icon": "third_party/Google.svg",
+      "comment": "I'm <b>searching</b> for your email information in <b>Google</b> <b>Gmail</b>"
+    },
+    "google_maps": {
+      "icon": "third_party/Google_Maps.svg",
+      "comment": "I'm <b>checking</b> location information with <b>Google</b> <b>Maps</b>"
+    },
+    "instagram": {
+      "icon": "third_party/Instagram.svg",
+      "comment": "I'm <b>checking</b> out your <b>Instagram</b> feed<"
+    },
+    "kakoo_talk": {
+      "icon": "third_party/Kakaotalk.svg",
+      "comment": "I'm <b>checking</b> your <b>KakaoTalk</b> messages"
+    },
+    "spotify": {
+      "icon": "third_party/Spotify.svg",
+      "comment": "I'm <b>searching</b> your music on <b>Spotify</b>"
+    },
+    "snapchat": {
+      "icon": "third_party/Snapchat.svg",
+      "comment": "I'm <b>checking</b> your <b>Snapchat</b> snaps"
+    },
+    "slack": {
+      "icon": "third_party/LinkedIn.svg",
+      "comment": "I'm <b>checking</b> your <b>Slack</b> messages"
+    },
+    "walmart": {
+      "icon": "third_party/Amazon.svg",
+      "comment": "I'm <b>searching</b> <b>Walmart</b> products"
+    },
+    "whatsapp": {
+      "icon": "third_party/WhatsApp.svg",
+      "comment": "I'm <b>checking</b> your <b>WhatsApp</b> messages"
+    },
+    "youtube": {
+      "icon": "third_party/YouTube.svg",
+      "comment": "I'm <b>checking</b> out your <b>YouTube</b> history"
+    },
+    "podcast": {
+      "icon": "third_party/Spotify.svg",
+      "comment": "I'm <b>finding</b> podcast shows and episodes"
+    },
+    "memory": {
+      "icon": "samsung/ic_sq_samsung_note.svg",
+      "comment": "I'm <b>retrieving</b> the memories we've shared"
+    },
+    "brave_web_search": {
+      "icon": "third_party/Google.svg",
+      "comment": "I'm <b>searching</b> the information on the <b>internet</b>"
+    },
+    "brave_local_search" : {
+      "icon": "third_party/Google.svg",
+      "comment": "I'm <b>searching</b> the information on the <b>internet</b>"
+    }
+  },
+  "default": {
+    "icon": "samsung/ic_sq_intelligence_services.svg",
+    "comment": "I'm <b>organizing</b> your information"
+  }
+}

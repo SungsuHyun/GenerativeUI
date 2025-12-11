@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "sequentialthinking": {
+      "command": "npm",
+      "args": [
+        "exec",
+        "--yes",
+        "--package",
+        "@modelcontextprotocol/server-sequential-thinking",
+        "--",
+        "mcp-server-sequential-thinking",
+        "--stdio"
+      ]
+    }    
+  }
+} 

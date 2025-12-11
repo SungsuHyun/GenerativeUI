@@ -1,0 +1,72 @@
+{
+  "name": "Icon Btn list",
+  "layout": "action_10",
+  "description": "Provides a list of quick actions or shortcuts for frequently used functions. Use this to offer multiple, immediately executable options (e.g., in-app functions or system shortcuts, not for launching apps).",
+  "contents_type": "middle",
+  "examples": [
+    "Create shortcuts for my favorite workouts.",
+    "Show quick settings.",
+    "List my most-used camera modes.",
+    "What are my to-dos for today?"
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title for the list of actions (e.g., 'Quick Actions', 'My Workouts').",
+      "type": "string",
+      "example": "행동유도 10번"
+    },
+    "action_list": {
+      "description": "A list of executable actions. Recommended 1-5 items.",
+      "type": "array",
+      "data": {
+        "icon": {
+          "description": "The path to the icon that visually represents the action.",
+          "type": "string",
+          "enum": [
+            "exercise_running",
+            "call_phone",
+            "calendar_planner_schedule"
+          ]
+        },
+        "list_content": {
+          "description": "The text label for the action (e.g., 'Start a run', 'Portrait mode').",
+          "type": "string",
+          "max_words": 3
+        }
+      },
+      "example": [
+        {
+          "icon": "exercise_running",
+          "list_content": "Running"
+        },
+        {
+          "icon": "call_phone",
+          "list_content": "Call with Jennie "
+        },
+        {
+          "icon": "calendar_planner_schedule",
+          "list_content": "Plan Tomorrow"
+        }
+      ]
+    }
+  },
+  "file": "action_10_btn_icon.html",
+  "sample": {
+    "component_title": "행동유도 10번",
+    "action_list": [
+      {
+        "icon": "exercise_running",
+        "list_content": "Running"
+      },
+      {
+        "icon": "call_phone",
+        "list_content": "Call with Jennie "
+      },
+      {
+        "icon": "calendar_planner_schedule",
+        "list_content": "Plan Tomorrow"
+      }
+    ]
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--list is--btn-list\"><button type=\"button\" class=\"widget--item\" v-for=\"(item, index) in data.action_list\" :key=\"index\"><p class=\"icon\"><img :src=\"'../assets/image/icon/' + item.icon + '.svg'\"></p><p class=\"text\">{{ item.list_content }}</p></button></div></div>"
+}

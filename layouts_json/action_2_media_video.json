@@ -1,0 +1,59 @@
+{
+  "name": "Media view (video)",
+  "layout": "action_2",
+  "description": "Used for displaying media content such as videos, music, or podcasts.",
+  "examples": [
+    "Suggest music for tomorrow",
+    "Recommend something to watch on YouTube",
+    "Suggest a podcast for my commute",
+    "Show me popular videos of Google Pixel reviews",
+    "Play the latest song by my favorite artist"
+  ],
+  "contents_type": "middle",
+  "parameters": {
+    "title": {
+      "description": "Title",
+      "type": "string",
+      "example": "Galaxy S25 Edge: Beyond slim | Samsung"
+    },
+    "background_img": {
+      "tool_type": "img_search",
+      "description": "The background image of the video",
+      "type": "string",
+      "default": "../assets/image/sample-media-video.jpg",
+      "example": "../assets/image/sample-media-video.jpg"
+    },
+    "text_total_time": {
+      "description": "Total playback time",
+      "type": "int",
+      "example": "1:27:23"
+    },
+    "text_owner": {
+      "description": "Media owner or artist",
+      "type": "string",
+      "example": "Samsung"
+    },
+    "logo_img": {
+      "tool_type": "img_search",
+      "description": "Media owner logo path (video, YouTube)",
+      "type": "string",
+      "default": "../assets/image/sample-media-video-logo.jpg",
+      "example": "../assets/image/sample-media-video-logo.jpg"
+    },
+    "text_subscribe": {
+      "description": "Number of subscribers for the media owner (video, YouTube)",
+      "type": "string",
+      "example": "7.45 million"
+    }
+  },
+  "file": "action_2_media_video.html",
+  "sample": {
+    "title": "Galaxy S25 Edge: Beyond slim | Samsung",
+    "background_img": "../assets/image/sample-media-video.jpg",
+    "text_total_time": "1:27:23",
+    "text_owner": "Samsung",
+    "logo_img": "../assets/image/sample-media-video-logo.jpg",
+    "text_subscribe": "7.45 million"
+  },
+  "html": "<div class=\"widget type2 is--media video\"><div class=\"widget--media__top\"><div class=\"media__top--left\"><p class=\"title\">{{ data.title }}</p><p class=\"total\" v-if=\"data.text_total_time\">{{ data.text_total_time }}</p></div></div><div class=\"widget--media__bottom\"><p class=\"logo\" v-if=\"data.logo_img\"><img :src=\"data.logo_img\"></p><div class=\"info-box\" v-if=\"data.text_owner &amp;&amp; data.text_subscribe\"><p v-if=\"data.text_owner\" class=\"owner\">{{ data.text_owner }}</p><p v-if=\"data.text_subscribe\" class=\"subscribe\">{{ data.text_subscribe }}</p></div></div><p class=\"widget--media__bg\" :style=\"{ backgroundImage: 'url(' + data.background_img + ')' }\"></p></div>"
+}

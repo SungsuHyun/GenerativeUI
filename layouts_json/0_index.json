@@ -1,0 +1,290 @@
+[
+  {
+    "file": "10_description-check-list.html",
+    "name": "Description + Check list",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "1_widget.html",
+    "name": "Visuals + Description",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "2_description-list.html",
+    "name": "Description + list",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "3_description-number-list.html",
+    "name": "Description + Number list",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "4_visual-number-list.html",
+    "name": "Visual + Number list",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "5_description-icon-list.html",
+    "name": "Description + Icon list",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "6_message-visual.html",
+    "name": "Message + Visual",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "7_description-thumbnail-list.html",
+    "name": "Description + Thumbnail list",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "8_thumbnail-list-visual.html",
+    "name": "Thumbnail list + Visual",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "9_a_description-toggle.html",
+    "name": "Description + Toggle",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "9_b_description-toggle-icon.html",
+    "name": "Description + Toggle(icon)",
+    "contents_type": "middle",
+    "demo": false
+  },
+  {
+    "file": "action_10_btn_icon.html",
+    "name": "Icon Btn list",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_11_btn_cta.html",
+    "name": "CTA Btn",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_12_btn_profile.html",
+    "name": "Profile + CTA Btn",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_13_device_power.html",
+    "name": "Device control_on/off",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_14_a_device_slider.html",
+    "name": "Device control_slider",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_14_b_device_slider.html",
+    "name": "Device control_slider",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_15_device_stepper.html",
+    "name": "Device Control (Stepper)",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_16_date_time_picker.html",
+    "name": "Time Picker",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_17_input.html",
+    "name": "Input Field",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_1_media_music.html",
+    "name": "Media view (music)",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_2_media_video.html",
+    "name": "Media view (video)",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_3_media_audio.html",
+    "name": "Media view (audio)",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_4_text_scroll.html",
+    "name": "Img + text scroll (Live Transcript)",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_5_a_text_food.html",
+    "name": "Text + Img (음식 특화)",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_5_text_article.html",
+    "name": "Text + Img (Article-focused)",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_6_toggle_list.html",
+    "name": "Toggle list",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_7_icon_toggle.html",
+    "name": "Icon + Toggle list",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_8_btn_list_cta.html",
+    "name": "CTA Btn list",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "action_9_composition_btn_list.html",
+    "name": "Composition Btn list",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "app-button.html",
+    "name": "상단: 단일 아이콘",
+    "contents_type": "button",
+    "demo": true
+  },
+  {
+    "file": "footer-icon.html",
+    "name": "Contextual Footer Icon",
+    "contents_type": "bottom",
+    "demo": true
+  },
+  {
+    "file": "footer-img.html",
+    "name": "Contextual Footer Image",
+    "contents_type": "bottom",
+    "demo": false
+  },
+  {
+    "file": "header.html",
+    "name": "상단: 이미지 + Sub 기능",
+    "contents_type": "top",
+    "demo": true
+  },
+  {
+    "file": "info_10_text_general_layout.html",
+    "name": "Text/General Layout",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_11_text_chips.html",
+    "name": "Text + chips",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_12_comparion_list.html",
+    "name": "Comparison list",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_13_multiple_imgs.html",
+    "name": "Thumbnail Group",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_14_text_thumbnail.html",
+    "name": "Titled Thumbnail Collection",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_1_thumbnail_list.html",
+    "name": "Thumbnail list",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_2_number_timeline_list.html",
+    "name": "Number/Timeline list",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_3_check_list.html",
+    "name": "Check list",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_4_sub_text_list.html",
+    "name": "Text + sub text list",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_5_text_graph_bar.html",
+    "name": "Text + graph(grouped bar)",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_6_text_graph_stacked_bar.html",
+    "name": "Progress Bar / Goal Tracker",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_7_description_direction.html",
+    "name": "Description + direction",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_8_text_img_life.html",
+    "name": "Text + Img (Image-focused)",
+    "contents_type": "middle",
+    "demo": true
+  },
+  {
+    "file": "info_9_text_img_weather.html",
+    "name": "Text + Img (Weather-focused)",
+    "contents_type": "middle",
+    "demo": true
+  }
+]

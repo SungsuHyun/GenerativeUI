@@ -1,0 +1,37 @@
+{
+  "mcpServers": {
+    "sequentialthinking": {
+      "command": "npm",
+      "args": [
+        "exec",
+        "--yes",
+        "--package",
+        "@modelcontextprotocol/server-sequential-thinking",
+        "--",
+        "mcp-server-sequential-thinking",
+        "--stdio"
+      ]
+    },
+    "time": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-time"
+      ]
+    },
+    "brave-search": {
+      "command": "npm",
+      "args": [
+        "exec",
+        "--yes",
+        "--package",
+        "@modelcontextprotocol/server-brave-search",
+        "--",
+        "mcp-server-brave-search",
+        "--stdio"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "BSA44gLyvdre7aYQIHSE-YC2j9z2g5W"
+      }
+    }
+  }
+}

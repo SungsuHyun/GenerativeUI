@@ -1,0 +1,39 @@
+{
+  "name": "Contextual Footer Image",
+  "layout": "footer",
+  "description": "Appears in the bottom area of a response to provide supplementary information related to the main content.",
+  "contents_type": "bottom",
+  "parameters": {
+    "text": {
+      "description": "A short text label (max 2 words) that accompanies the image in the footer.",
+      "type": "string",
+      "max_words": 2,
+      "example": "Pasta cook guide"
+    },
+    "img": {
+      "tool_type": "img_search",
+      "description": "An array of 1-3 supplementary images that provide additional visual context related to the main content.",
+      "type": "array",
+      "min": 1,
+      "max": 3,
+      "enum": [
+        "../assets/image/gen-image/living/living-01.jpg",
+        "../assets/image/gen-image/living/living-02.jpg",
+        "../assets/image/gen-image/living/living-03.jpg"
+      ],
+      "example": [
+        "../assets/image/gen-image/living/living-01.jpg",
+        "../assets/image/gen-image/living/living-02.jpg"
+      ]
+    }
+  },
+  "file": "footer-img.html",
+  "sample": {
+    "text": "Pasta cook guide",
+    "img": [
+      "../assets/image/gen-image/living/living-01.jpg",
+      "../assets/image/gen-image/living/living-02.jpg"
+    ]
+  },
+  "html": "<div class=\"footer\"><div class=\"footer--left\"><p v-if=\"data.text\" class=\"footer--title\">{{ data.text }}</p></div><div class=\"footer--right\" :class=\"data.img ? 'img' : 'icon' \"><template v-if=\"data.img\"><p class=\"footer--img\" v-for=\"item in data.img\" :class=\"{more: data.img.length > 1}\"><img :src=\"item\" alt=\"img\" class=\"img\"></p></template><template v-if=\"data.icon\"><p class=\"footer--img\"><img :src=\"'../assets/image/footer-icon/' + data.icon + '.svg'\" alt=\"img\" class=\"img\"></p></template></div></div>"
+}

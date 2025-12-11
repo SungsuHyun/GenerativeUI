@@ -1,0 +1,54 @@
+{
+  "name": "Text + Img (Weather-focused)",
+  "layout": "info_9",
+  "description": "Used specifically for weather-related queries. Displays key information such as the current weather, temperature, high/low for the day, and specific conditions like air quality or UV index.",
+  "contents_type": "middle",
+  "examples": [
+    "Tell me the weather in Seoul right now.",
+    "Will it rain this afternoon?",
+    "How is the air quality tomorrow?",
+    "Is the UV index high tomorrow?"
+  ],
+  "parameters": {
+    "location": {
+      "description": "The location for which the weather is being displayed (e.g., 'Seoul').",
+      "type": "string",
+      "max_words": 2,
+      "example": "Milan Seoul"
+    },
+    "degree": {
+      "description": "The primary weather metric, such as the current temperature or condition value (e.g., '25°C', 'High', 'Good').",
+      "type": "string",
+      "max_words": 2,
+      "example": "21°"
+    },
+    "info_summary": {
+      "description": "A short, descriptive summary of the weather (e.g., 'Mostly Sunny', 'Fine Dust Alert').",
+      "type": "string",
+      "max_words": 3,
+      "example": "Sunny"
+    },
+    "info_high_low": {
+      "description": "The daily high and low temperatures (e.g., 'H: 28° / L: 15°').",
+      "type": "string",
+      "example": "H:24° L:12°"
+    },
+    "background_img": {
+      "description": "The path to an icon that visually represents the weather condition (e.g., a sun, cloud, or rain icon).",
+      "type": "string",
+      "enum": [
+        "../assets/image/weather-bg.jpg"
+      ],
+      "example": "../assets/image/weather-bg.jpg"
+    }
+  },
+  "file": "info_9_text_img_weather.html",
+  "sample": {
+    "location": "Milan Seoul",
+    "degree": "21°",
+    "info_summary": "Sunny",
+    "info_high_low": "H:24° L:12°",
+    "background_img": "../assets/image/weather-bg.jpg"
+  },
+  "html": "<div class=\"widget type2 is--weather\"><div class=\"widget--weather__top\"><p class=\"place\">{{ data.location}}</p><p class=\"degree\">{{ data.degree}}</p></div><div class=\"widget--weather__bottom\"><p class=\"forecast\">{{ data.info_summary }}</p><p class=\"temp-detail\">{{ data.info_high_low}}</p></div><p class=\"widget--weather__bg\" :style=\"{ backgroundImage: 'url(' + data.background_img + ')' }\"></p></div>"
+}

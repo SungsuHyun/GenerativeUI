@@ -1,0 +1,99 @@
+{
+  "name": "Titled Thumbnail Collection",
+  "layout": "info_14",
+  "description": "Displays a group of representative thumbnails (e.g., photos, profile pictures) under a single title to represent a collection, event, or album. It is used to visually summarize a group of related items.",
+  "contents_type": "middle",
+  "examples": [
+    "Create a collection of the best photos from my Busan trip.",
+    "Show only the photos of Euna from last week's trip.",
+    "Show me my appointment for this weekend."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A date or period associated with the collection (e.g., 'Last Weekend', 'October 2023').",
+      "type": "string",
+      "example": "Sep 11-14, 2025"
+    },
+    "text_heading": {
+      "description": "The main title for the collection of thumbnails (e.g., 'Busan Trip Highlights', 'Marketing Team Sync').",
+      "type": "string",
+      "example": "Best Shots in Busan"
+    },
+    "thumbnail_list": {
+      "description": "An array of image paths for the representative thumbnails (e.g., photos or profile pictures). The layout typically displays a stack of up to 3 thumbnails, with an indicator for additional items.",
+      "type": "array",
+      "data": {
+        "thumbnail_img": {
+          "tool_type": "img_search",
+          "description": "The path to an individual image in the group.",
+          "type": "string",
+          "default": [
+            "../assets/image/gen-image/people/people-07.jpg",
+            "../assets/image/gen-image/hobby/hobby-03.jpg",
+            "../assets/image/gen-image/thing/thing-01.jpg",
+            "../assets/image/gen-image/animal/animal-03.jpg",
+            "../assets/image/gen-image/event/event-01.jpg",
+            "../assets/image/gen-image/exercise/exercise-03.jpg",
+            "../assets/image/gen-image/food/food-01.jpg",
+            "../assets/image/gen-image/living/living-03.jpg",
+            "../assets/image/gen-image/vacation/vacation-01.jpg"
+          ]
+        }
+      },
+      "min": 4,
+      "max": 7,
+      "example": [
+        {
+          "thumbnail_img": "../assets/image/gen-image/people/people-07.jpg"
+        },
+        {
+          "thumbnail_img": "../assets/image/gen-image/hobby/hobby-03.jpg"
+        },
+        {
+          "thumbnail_img": "../assets/image/gen-image/thing/thing-01.jpg"
+        },
+        {
+          "thumbnail_img": "../assets/image/gen-image/animal/animal-03.jpg"
+        },
+        {
+          "thumbnail_img": "../assets/image/gen-image/event/event-01.jpg"
+        },
+        {
+          "thumbnail_img": "../assets/image/gen-image/exercise/exercise-03.jpg"
+        },
+        {
+          "thumbnail_img": "../assets/image/gen-image/food/food-01.jpg"
+        }
+      ]
+    }
+  },
+  "file": "info_14_text_thumbnail.html",
+  "sample": {
+    "component_title": "Sep 11-14, 2025",
+    "text_heading": "Best Shots in Busan",
+    "thumbnail_list": [
+      {
+        "thumbnail_img": "../assets/image/gen-image/people/people-07.jpg"
+      },
+      {
+        "thumbnail_img": "../assets/image/gen-image/hobby/hobby-03.jpg"
+      },
+      {
+        "thumbnail_img": "../assets/image/gen-image/thing/thing-01.jpg"
+      },
+      {
+        "thumbnail_img": "../assets/image/gen-image/animal/animal-03.jpg"
+      },
+      {
+        "thumbnail_img": "../assets/image/gen-image/event/event-01.jpg"
+      },
+      {
+        "thumbnail_img": "../assets/image/gen-image/exercise/exercise-03.jpg"
+      },
+      {
+        "thumbnail_img": "../assets/image/gen-image/food/food-01.jpg"
+      }
+    ]
+  },
+  "html": "<div class=\"widget type2 is--text-thumbnail\"><div class=\"widget--thumbnail__top\"><p class=\"widget--title\">{{ data.component_title }}</p><p class=\"widget--thumbnail__title\">{{ data.text_heading }}</p></div><div class=\"widget--thumbnail__images\"><template v-for=\"(item, index) in data.thumbnail_list\"><p class=\"image\" v-if=\"index < 3\"><img :src=\"item.thumbnail_img\"></p></template><p v-if=\"data.thumbnail_list.length > 3\" class=\"more\">+{{ data.thumbnail_list.length - 3 }}</p></div></div>"
+}

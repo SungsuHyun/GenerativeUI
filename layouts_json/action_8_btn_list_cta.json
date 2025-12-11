@@ -1,0 +1,62 @@
+{
+  "name": "CTA Btn list",
+  "layout": "action_8",
+  "description": "Tracks progress towards a primary goal by displaying a breakdown of achievements by sub-category. Ideal for monitoring budgets, fitness goals, or project milestones. Features a call-to-action button.",
+  "examples": [
+    "How much protein have I had today?",
+    "Show me my spending breakdown for this month.",
+    "What's the status of my ongoing projects?",
+    "How close am I to my reading goal for the year?"
+  ],
+  "contents_type": "middle",
+  "parameters": {
+    "component_title": {
+      "description": "A brief summary of the content, expressed as a short phrase.",
+      "type": "string",
+      "example": "행동유도 8번"
+    },
+    "quick_list": {
+      "description": "A list for quick links or related actions, with 1 to 5 items.",
+      "type": "array",
+      "data": {
+        "list_content": {
+          "type": "string",
+          "max_words": 3
+        }
+      },
+      "example": [
+        {
+          "list_content": "Olive oil"
+        },
+        {
+          "list_content": "Smoked Salmon"
+        },
+        {
+          "list_content": "Rosemary"
+        }
+      ]
+    },
+    "text_cta": {
+      "description": "The text label for the Call-to-Action button.",
+      "type": "string",
+      "example": "Call with items"
+    }
+  },
+  "file": "action_8_btn_list_cta.html",
+  "sample": {
+    "component_title": "행동유도 8번",
+    "quick_list": [
+      {
+        "list_content": "Olive oil"
+      },
+      {
+        "list_content": "Smoked Salmon"
+      },
+      {
+        "list_content": "Rosemary"
+      }
+    ],
+    "text_cta": "Call with items"
+  },
+  "html": "<div class=\"widget type2 is--btnlist-cta\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--list is--btnlist-cta quick-list\"><div class=\"widget--item\" v-for=\"(item, index) in data.quick_list\" :key=\"index\"><p class=\"widget--item__box\">{{ item.list_content }}</p></div></div><button type=\"button\" class=\"btnlist-cta__call\">{{ data.text_cta }}</button></div>"
+}

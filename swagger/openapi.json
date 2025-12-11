@@ -1,0 +1,221 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "MCP Host API",
+    "description": "New 3-Step MCP Host: 1) MCP Data Collection -> 2) Layout Classification -> 3) Data Mapping for Dynamic UI Generation",
+    "version": "2.0.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "description": "Health check endpoint",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/process": {
+      "post": {
+        "summary": "Process Request",
+        "description": "Process user request through new 3-step workflow with streaming response.\n\nNew Workflow:\n1. MCP Data Collection: intent + context -> user data collection\n2. Layout Classification: intent + context + data -> select appropriate layout\n3. Data Mapping: layout data schema + MCP user data -> final UI mapping\n\nArgs:\n    user_request: Contains intent and context.\n    \nReturns:\n    StreamingResponse with the complete workflow result.",
+        "operationId": "process_request_process_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mcp/user/tools": {
+      "get": {
+        "summary": "List Mcp User Tools",
+        "description": "List available MCP User tools",
+        "operationId": "list_mcp_user_tools_mcp_user_tools_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mcp/user/reconnect": {
+      "post": {
+        "summary": "Reconnect Mcp User Client",
+        "description": "Manually reconnect MCP User client",
+        "operationId": "reconnect_mcp_user_client_mcp_user_reconnect_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/layouts": {
+      "get": {
+        "summary": "List Available Layouts",
+        "description": "List all available layout templates",
+        "operationId": "list_available_layouts_layouts_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/layouts/{layout_id}": {
+      "get": {
+        "summary": "Get Layout Details",
+        "description": "Get detailed information about a specific layout",
+        "operationId": "get_layout_details_layouts__layout_id__get",
+        "parameters": [
+          {
+            "name": "layout_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Layout Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "UserRequest": {
+        "properties": {
+          "intent": {
+            "type": "string",
+            "title": "Intent",
+            "description": "User's intent or query",
+            "default": "Show me a photo of a cute cat."
+          },
+          "context": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Context",
+            "default": {}
+          }
+        },
+        "type": "object",
+        "title": "UserRequest"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

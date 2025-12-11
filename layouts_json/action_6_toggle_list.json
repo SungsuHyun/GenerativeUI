@@ -1,0 +1,68 @@
+{
+  "name": "Toggle list",
+  "layout": "action_6",
+  "description": "Displays a list of items where each can be individually toggled on or off. Ideal for managing settings like alarms, notifications, or app permissions.",
+  "examples": [
+    "Manage my alarm settings.",
+    "Turn on notifications for new emails, but turn them off for social media.",
+    "Show me the app permission list.",
+    "Disable all alarms."
+  ],
+  "contents_type": "middle",
+  "parameters": {
+    "component_title": {
+      "description": "A brief summary of the information or content defined in each layout, expressed as a short word or phrase rather than a full sentence. Example: For a user query 'Show me the way from Gangnam Station to Pangyo Station and my schedule for today,' the title could be 'Route and Schedule.'",
+      "type": "string",
+      "example": "행동유도 11번"
+    },
+    "toggle_list": {
+      "description": "A list of items that can be toggled. Used to list multiple items of the same type, with a minimum of one and a maximum of five items. The divider for the last item is hidden.",
+      "type": "array",
+      "data": {
+        "list_subject": {
+          "description": "A single line of text, with a maximum width of 150 and a limit of 20 characters. Content exceeding the character limit will be truncated with an ellipsis (...).",
+          "type": "string",
+          "max_words": 3
+        },
+        "list_toggle": {
+          "description": "The on/off state of the item.",
+          "type": "boolean"
+        }
+      },
+      "max": 3,
+      "example": [
+        {
+          "list_subject": "List Text",
+          "list_toggle": true
+        },
+        {
+          "list_subject": "List Text",
+          "list_toggle": false
+        },
+        {
+          "list_subject": "List Text",
+          "list_toggle": false
+        }
+      ]
+    }
+  },
+  "file": "action_6_toggle_list.html",
+  "sample": {
+    "component_title": "행동유도 11번",
+    "toggle_list": [
+      {
+        "list_subject": "List Text",
+        "list_toggle": true
+      },
+      {
+        "list_subject": "List Text",
+        "list_toggle": false
+      },
+      {
+        "list_subject": "List Text",
+        "list_toggle": false
+      }
+    ]
+  },
+  "html": "<div class=\"widget type2\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--list is--toggle-list\"><div class=\"widget--item\" v-for=\"item in data.toggle_list\"><div class=\"widget--item__box\"><p class=\"title\">{{ item.list_subject }}</p><label for=\"\" class=\"forms--toggle\"><input type=\"checkbox\" :checked=\"item.list_toggle\"> <span class=\"forms--toggle__icon\"></span></label></div></div></div></div>"
+}

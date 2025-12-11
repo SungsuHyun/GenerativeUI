@@ -1,0 +1,107 @@
+Searching notes for [keyword] in Samsung Notes.
+Pulling your latest notes from Samsung Notes.
+Filtering notes by [date range] in Samsung Notes.
+I’m opening your latest notes in Samsung Notes.
+Checking today’s events in Calendar.
+Looking up free time on [date] in Calendar.
+Cross-checking conflicts this [week] in Calendar.
+I’m checking today’s events in Calendar.
+I’m looking up free time in Calendar.
+I’m cross-checking conflicts in Calendar.
+Finding photos tagged [keyword] in Gallery.
+Filtering photos by [date range] in Gallery.
+Surfacing shots from [location] in Gallery.
+I’m finding photos tagged [keyword] in Gallery.
+I’m filtering photos by [date range] in Gallery.
+I’m surfacing shots from [location] in Gallery.
+Searching email by [subject] in Email.
+Checking attachments in Email.
+Pulling the latest messages in Email.
+I’m searching email by [subject] in Email.
+I’m checking attachments in Email.
+Checking the [timeframe] forecast in Weather.
+Looking up weather for [location] in Weather.
+Reading hourly updates in Weather.
+I’m checking the [timeframe] forecast in Weather.
+Searching contacts for [name] in Contacts.
+Pulling recent contacts in Contacts.
+Matching company details in Contacts.
+I’m pulling up recent contacts in Contacts.
+I’m matching company details in Contacts.
+Loading recent captures from Camera.
+Opening Camera in [mode].
+Preparing quick capture via Camera.
+Searching messages for [keyword] in Messages.
+Pulling recent threads in Messages.
+Checking unread messages in Messages.
+Checking recent calls in Phone.
+Looking up [name] in call history.
+Preparing a call to [name] in Phone.
+Reading alarms set for [day] in Clock.
+Checking your next alarm in Clock.
+Reviewing timers and stopwatch in Clock.
+Checking alarms set for today in Clock.
+Preparing an alarm for [time] in Clock.
+Locating [device] via Samsung Find.
+Checking device status in Samsung Find.
+Pinging [device] from Samsung Find.
+Opening your [bookmark] in Samsung Internet.
+Searching the web in Samsung Internet.
+Loading open tabs in Samsung Internet.
+Checking today’s steps in Samsung Health.
+Reviewing sleep for [date] in Samsung Health.
+Reading heart-rate trend in Samsung Health.
+Checking Bixby quick commands for [task].
+Fetching Bixby routines you might need.
+Passing your request to Bixby for [task].
+Checking device status in SmartThings.
+Scanning rooms for active devices in SmartThings.
+Running [scene] in SmartThings.
+Searching memos for [keyword] in Samsung Note.
+Pulling recent memos from Samsung Note.
+Sorting memos by [date/tag] in Samsung Note.
+Checking recent transactions in Samsung Pay.
+Setting your default card in Samsung Pay.
+Preparing tap to pay with [card] in Samsung Pay.
+Searching notes for [keyword] in Notes.
+Looking up [track/artist] on Spotify.
+Resuming your last playlist on Spotify.
+Saving this to [playlist] on Spotify.
+Searching YouTube for [query].
+Resuming [video] on YouTube.
+Queueing this to Watch Later on YouTube.
+Opening your Subscriptions on YouTube.
+Searching [podcast] episodes.
+Resuming the latest episode.
+Downloading episodes for offline play.
+Checking recent posts from [page/friend].
+Searching Facebook for [topic].
+Opening notifications on Facebook.
+Finding [title] on Netflix.
+Resuming [show] on Netflix.
+Checking availability in your region.
+Continuing [title] on Netflix.
+Adding [title] to My List on Netflix.
+Switching to the [profile] profile on Netflix.
+Searching Instagram for #[hashtag].
+Opening your DMs on Instagram.
+Saving this to [collection] on Instagram.
+Searching Gmail for [subject].
+Pulling unread mail in Gmail.
+Filtering Gmail by [label].
+Looking up directions to [place] in Google Maps.
+Checking traffic to [destination] in Google Maps.
+Finding nearby [category] in Google Maps.
+Saving [place] in Google Maps.
+Searching chats for [keyword] in KakaoTalk.
+Pulling unread messages in KakaoTalk.
+Opening the [chat] room in KakaoTalk.
+Searching Drive for [file].
+Opening [folder] in Google Drive.
+Pulling recent files from Google Drive.
+Saving [place] in Naver Map.
+Checking delivery status for [order] in Coupang.
+Adding [item] to your cart in Coupang.
+Searching the web for [query].
+Looking up [topic] on Internet.
+Finding videos about [subject] on YouTube.

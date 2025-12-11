@@ -1,0 +1,42 @@
+{
+  "name": "Text + Img (음식 특화)",
+  "layout": "action_5_a",
+  "description": "영화 볼 때 간식, 음식, 메뉴 등을 추천해주는 발화가 나올 때 호출하는 레이아웃\n음식, 메뉴와 관련된 발화가 나올 때 호출하는 레이아웃\n발화 예시: Recommend a snack for the movie night based on today’s calory intake. (이 발화는 무조건 이 레이아웃으로 나오도록 고정)\n런닝 끝나고 먹을 음식 추천해줘\n저번에 먹은 저녁 메뉴가 뭐였지?",
+  "contents_type": "middle",
+  "parameters": {
+    "component_title": {
+      "description": "description : 어떤 용도로 추천하는지, 어떤 용도의 음식인지 설명하는 글 (예: 영화볼때 먹을 간식인 경우, Movie night snack)",
+      "type": "string",
+      "example": "Nacho Chips"
+    },
+    "text_heading": {
+      "description": "음식이름, 최대 2줄, 줄바꿈처리는 단어 단위로",
+      "type": "string",
+      "example": "Movie night snack"
+    },
+    "text_description": {
+      "description": "음식 kcal, 아래는 Small portion 으로 텍스트 고정",
+      "type": "string",
+      "example": "250 kcal"
+    },
+    "icon": {
+      "description": "이동/실행을 위한 버튼 (예: 화살표 아이콘)",
+      "type": "image",
+      "example": "../assets/image/icon/arrow-right.svg"
+    },
+    "image": {
+      "description": "음식 대표 이미지 ( image path )",
+      "type": "image",
+      "example": "../assets/image/food-image/food-nacho.jpg"
+    }
+  },
+  "file": "action_5_a_text_food.html",
+  "sample": {
+    "component_title": "Nacho Chips",
+    "text_heading": "Movie night snack",
+    "text_description": "250 kcal",
+    "icon": "../assets/image/icon/arrow-right.svg",
+    "image": "../assets/image/food-image/food-nacho.jpg"
+  },
+  "html": "<div class=\"widget type2 is--article is--food\"><div class=\"widget--article__top\"><p class=\"text\">{{ data.text_heading }}</p><p class=\"title\">{{ data.component_title }}</p></div><div class=\"widget--article__bottom flex-justify--space\"><p class=\"desc\"><span>{{ data.text_description }}</span> <span>Small portion</span></p><button type=\"button\" class=\"widget--article__arrow\"><img :src=\"data.icon\" alt=\"ARTICLE BG\" class=\"img\"></button></div><p class=\"widget--article__bg\"><img :src=\"data.image\" alt=\"ARTICLE BG\" class=\"img\"></p></div>"
+}

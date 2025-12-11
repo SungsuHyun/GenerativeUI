@@ -1,0 +1,54 @@
+{
+  "name": "Profile + CTA Btn",
+  "layout": "action_12",
+  "description": "Displays a person's profile with their name, photo, and contact information. It is designed to facilitate immediate actions like placing a call or sending a message. It can be used to show a single contact or as part of a list for multiple contacts.",
+  "contents_type": "middle",
+  "examples": [
+    "Call Jane Doe.",
+    "Show me John Smith's contact info.",
+    "Show me the contacts for my project team.",
+    "Gather my relatives' contact info.",
+    "Let me know the today's schedule and call my next meeting."
+  ],
+  "parameters": {
+    "component_title": {
+      "description": "A brief title, typically used when displaying a group of contacts (e.g., 'Family', 'Project Team').",
+      "type": "string",
+      "example": "행동유도 12번"
+    },
+    "profile_thumbnail_img": {
+      "tool_type": "image_search",
+      "description": "The thumbnail image to the person's profile picture.",
+      "type": "string",
+      "default": "../assets/image/sample-profile.jpg",
+      "example": null
+    },
+    "text_name": {
+      "description": "The full name of the person.",
+      "type": "string",
+      "max_words": 2,
+      "example": "Jenny"
+    },
+    "text_number": {
+      "description": "The person's phone number or primary contact detail, used for the call/message actions.",
+      "type": "string",
+      "format": "phone number",
+      "example": "010-345-6582"
+    },
+    "text_cta": {
+      "description": "The text for the Call-to-Action button (e.g., 'Call with {name}', 'Call Now', 'Message Now').",
+      "type": "string",
+      "max_words": 3,
+      "example": "Call with Jenny"
+    }
+  },
+  "file": "action_12_btn_profile.html",
+  "sample": {
+    "component_title": "행동유도 12번",
+    "img": "../assets/image/sample-profile.jpg",
+    "text_name": "Jenny",
+    "text_number": "010-345-6582",
+    "text_cta": "Call with Jenny"
+  },
+  "html": "<div class=\"widget type2 is--profile\"><p class=\"widget--title\">{{ data.component_title }}</p><div class=\"widget--profile__info\"><p class=\"profile\"><img :src=\"data.img\"></p><div class=\"info--box\"><p class=\"name\">{{ data.text_name }}</p><p class=\"number\">{{ data.text_number }}</p></div></div><button type=\"button\" class=\"widget--profile__call\">{{ data.text_cta }}</button></div>"
+}

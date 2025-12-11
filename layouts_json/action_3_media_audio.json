@@ -1,0 +1,45 @@
+{
+  "name": "Media view (audio)",
+  "layout": "action_3",
+  "description": "Used for displaying audio content such as music, podcasts, or recordings, along with playback details.",
+  "examples": [
+    "Suggest a podcast for my commute",
+    "Play the latest album by IU",
+    "Find some relaxing music for studying",
+    "Show me the most recent episode of the 'Science Vs' podcast",
+    "Play the recent recording of the 'Science Vs' podcast"
+  ],
+  "contents_type": "middle",
+  "parameters": {
+    "title": {
+      "description": "The title of the media",
+      "type": "string",
+      "example": "Stranger"
+    },
+    "audio_thumbnail_img": {
+      "description": "The background image of the media",
+      "tool_type": "img_search",
+      "type": "string",
+      "default": "../assets/image/sample-media-record-img.jpg",
+      "example": "../assets/image/sample-media-record-img.jpg"
+    },
+    "text_total_time": {
+      "description": "Total playback time",
+      "type": "int",
+      "example": "03:48"
+    },
+    "text_owner": {
+      "description": "The owner or artist of the media",
+      "type": "string",
+      "example": "Ina Wroldsen"
+    }
+  },
+  "file": "action_3_media_audio.html",
+  "sample": {
+    "title": "Stranger",
+    "audio_thumbnail_img": "../assets/image/sample-media-record-img.jpg",
+    "text_total_time": "03:48",
+    "text_owner": "Ina Wroldsen"
+  },
+  "html": "<div class=\"widget type2 is--media record\"><div class=\"widget--media__top\"><p class=\"media__top--img\"><img :src=\"data.audio_thumbnail_img\"></p><div class=\"media__top--left\"><p class=\"title\">{{ data.title }}</p><p class=\"owner\" v-if=\"data.text_owner\">{{ data.text_owner }}</p></div></div><p class=\"widget--media__middle\"></p><div class=\"widget--media__bottom\"><p class=\"total\" v-if=\"data.text_total_time\">{{ data.text_total_time }}</p><button type=\"button\" class=\"right play\"></button></div></div>"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Visuals + Description",
+  "layout": "1",
+  "description": "When listing a single piece of information, When the content to be conveyed is sufficient with text, When including a visual (image, graph, map, etc.)",
+  "contents_type": "middle",
+  "parameters": {
+    "title": {
+      "description": "A summary of the information",
+      "type": "string",
+      "example": "Title"
+    },
+    "visual": {
+      "description": "Visual information related to the content",
+      "type": "string",
+      "example": "../assets/image/img-box.jpg"
+    },
+    "sub_title": {
+      "description": "Subtitle (not displayed if null)",
+      "type": "string | null",
+      "example": null
+    },
+    "text": {
+      "description": "Detailed description",
+      "type": "string",
+      "example": "Lorem ipsum dolor sit amet consectetur.<br/>Eget pellentesque necconsectetur tempus turpis ultrices."
+    }
+  },
+  "file": "1_widget.html",
+  "sample": {
+    "title": "Title",
+    "visual": "../assets/image/img-box.jpg",
+    "sut_title": "Sub Title",
+    "text": "Lorem ipsum dolor sit amet consectetur.<br/>Eget pellentesque necconsectetur tempus turpis ultrices."
+  },
+  "html": "<div class=\"widget\"><p class=\"widget--title\">{{ data.title }}</p><div class=\"widget--img\"><img v-bind:src=\"data.visual\" alt=\"img\" class=\"widget--img\"></div><p v-if=\"data.sut_title\" class=\"widget--subtitle\">{{ data.sut_title }}</p><p class=\"widget--desc\" v-html=\"data.text\"></p></div>"
+}
